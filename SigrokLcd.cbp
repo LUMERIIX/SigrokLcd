@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="LcdTest" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/LcdTest" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Option projectLinkerOptionsRelation="2" />
+				<Compiler>
+					<Add option="-std=c++11" />
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/LcdTest" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Option projectLinkerOptionsRelation="2" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-std=c++11" />
+			<Add option="-fPIC" />
+			<Add option="`wx-config --cflags`" />
+			<Add option="`pkg-config glib-2.0 --cflags`" />
+			<Add option="`pkg-config glibmm-2.4 --cflags`" />
+			<Add option="`pkg-config libsigrokcxx --cflags`" />
+			<Add option='[[if (GetCompilerFactory().GetCompilerVersionString(_T(&quot;gcc&quot;)) &gt;= _T(&quot;4.8.0&quot;)) print(_T(&quot;-Wno-unused-local-typedefs&quot;));]]' />
+		</Compiler>
+		<Linker>
+			<Add option="`wx-config --libs`" />
+			<Add option="`pkg-config glib-2.0 --libs`" />
+			<Add option="`pkg-config glibmm-2.4 --libs`" />
+			<Add option="`pkg-config libsigrokcxx --libs`" />
+		</Linker>
+		<Unit filename="SigrokLcdApp.cpp" />
+		<Unit filename="SigrokLcdApp.h" />
+		<Unit filename="SigrokLcdMain.cpp" />
+		<Unit filename="SigrokLcdMain.h" />
+		<Unit filename="lcdwindow.cpp" />
+		<Unit filename="lcdwindow.h" />
+		<Unit filename="led.cpp" />
+		<Unit filename="led.h" />
+		<Unit filename="leds.xpm" />
+		<Unit filename="wxsmith/LcdTestframe.wxs" />
+		<Extensions>
+			<envvars />
+			<code_completion />
+			<debugger />
+			<wxsmith version="1">
+				<gui name="wxWidgets" src="LcdTestApp.cpp" main="LcdTestFrame" init_handlers="necessary" language="CPP" />
+				<resources>
+					<wxFrame wxs="wxsmith/LcdTestframe.wxs" src="LcdTestMain.cpp" hdr="LcdTestMain.h" fwddecl="0" i18n="1" name="LcdTestFrame" language="CPP" />
+				</resources>
+			</wxsmith>
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
