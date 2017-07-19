@@ -7,3 +7,8 @@ It aims to support all Multimeters and FrequncyCounters of Sigrok.
 
 Supported Devices [theoretical]: All Multimeters / FrequencyCounter
 Supported Devices [Tested]: bk-1856d (FrequencyCounter)
+
+Screenshots:
+![Alt text](Desktop/off.png "Off state")
+
+
