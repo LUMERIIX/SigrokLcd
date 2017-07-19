@@ -9,6 +9,7 @@ Supported Devices [theoretical]: All Multimeters / FrequencyCounter<br>
 Supported Devices [Tested]: bk-1856d (FrequencyCounter)
 
 Screenshots:<br>
-![GUI after Startup](https://github.com/LUMERIIX/SigrokLcd/blob/master/Screenshots/off.png)
-
-
+![GUI after Startup](https://github.com/LUMERIIX/SigrokLcd/blob/master/Screenshots/off.png)<br>
+![Select Device](https://github.com/LUMERIIX/SigrokLcd/blob/master/Screenshots/select.png)<br>
+![set samplerate](https://github.com/LUMERIIX/SigrokLcd/blob/master/Screenshots/samplerate.png)<br>
+![Shows Value](https://github.com/LUMERIIX/SigrokLcd/blob/master/Screenshots/shows.png)<br>
