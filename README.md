@@ -9,6 +9,6 @@ Supported Devices [theoretical]: All Multimeters / FrequencyCounter
 Supported Devices [Tested]: bk-1856d (FrequencyCounter)
 
 Screenshots:
-![Alt text](/screenshots/off.png?raw=true "Off state")
+![GUI after Startup](https://github.com/LUMERIIX/screenshots/off.png)
 
 
