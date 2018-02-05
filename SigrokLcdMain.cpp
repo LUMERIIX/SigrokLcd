@@ -32,6 +32,13 @@
 #include <wx/wxprec.h>
 #include <wx/bookctrl.h>
 #include <wx/choicdlg.h>
+#include <wx/event.h>
+
+
+#include <libserialport.h>
+
+struct sp_port *port;
+struct sp_port **ports;
 
 using ctype=gboolean;
 using sigrok::Packet;
@@ -41,6 +48,7 @@ const long SigrokLcdFrame::idMenuQuit = wxNewId();
 const long SigrokLcdFrame::idMenuAbout = wxNewId();
 const long SigrokLcdFrame::idMenuConnect = wxNewId();
 const long SigrokLcdFrame::idMenuDisconnect = wxNewId();
+const long SigrokLcdFrame::idMenuCalibration = wxNewId();
 
 const long SigrokLcdFrame::ID_STATUSBAR1 = wxNewId();
 
@@ -64,11 +72,13 @@ SigrokLcdFrame::SigrokLcdFrame(wxWindow* parent,wxWindowID id)
     wxMenu* Menu1;
     wxMenu* Menu2;
     wxMenu* Menu3;
+    wxMenu* Menu4;
     wxMenuBar* MenuBar1;
     wxMenuItem* MenuItem1;
     wxMenuItem* MenuItem2;
     wxMenuItem* MenuItem3;
     wxMenuItem* MenuItem4;
+    wxMenuItem* MenuItem5;
 
     Create(parent, id, wxEmptyString, wxDefaultPosition, wxDefaultSize, wxDEFAULT_FRAME_STYLE, _T("id"));
     MenuBar1 = new wxMenuBar();
@@ -86,6 +96,10 @@ SigrokLcdFrame::SigrokLcdFrame(wxWindow* parent,wxWindowID id)
     Menu3->Append(MenuItem3);
     Menu3->Append(MenuItem4);
     MenuBar1->Append(Menu3, _("Configure"));
+    Menu4 = new wxMenu();
+    MenuItem5 = new wxMenuItem(Menu4, idMenuCalibration, _("Calibrating Device\tF5"), _("Calibration of the Device"), wxITEM_NORMAL);
+    Menu4->Append(MenuItem5);
+    MenuBar1->Append(Menu4, _("Calibration"));
     SetMenuBar(MenuBar1);
     StatusBar1 = new wxStatusBar(this, ID_STATUSBAR1, 0, _T("ID_STATUSBAR1"));
     int __wxStatusBarWidths_1[1] = { -1 };
@@ -98,14 +112,16 @@ SigrokLcdFrame::SigrokLcdFrame(wxWindow* parent,wxWindowID id)
     Connect(idMenuAbout,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&SigrokLcdFrame::OnAbout);
     Connect(idMenuConnect,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&SigrokLcdFrame::OnConnect);
     Connect(idMenuDisconnect,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&SigrokLcdFrame::OnDisconnect);
+    Connect(idMenuCalibration,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&SigrokLcdFrame::OnCalib);
     //*)
+    //Bind(wxEVT_THREAD, &SigrokLcdFrame::OnThreadUpdate, this);
 
     this->SetSizeHints(wxDefaultSize, wxDefaultSize);
 
     wxBoxSizer* bSizer0 = new wxBoxSizer(wxVERTICAL);
 
     wxBoxSizer* bSizer1 = new wxBoxSizer(wxHORIZONTAL);
-    lcd_ = new wxLCDWindow(this, wxDefaultPosition, wxSize(300, 120));
+    lcd_ = new wxLCDWindow(this, wxDefaultPosition, wxSize(600, 240));
     lcd_->SetNumberDigits(10);
     lcd_->SetValue(_T("")); //lcd_->SetValue("");
 
@@ -149,19 +165,52 @@ SigrokLcdFrame::SigrokLcdFrame(wxWindow* parent,wxWindowID id)
 
     bSizer2->AddStretchSpacer(1);
 
+    wxArrayString MeasChannels;
+    wxArrayString RefChannels;
+    wxArrayString Gatetime;
+    MeasChannels.Add(wxT("CHA"));
+    MeasChannels.Add(wxT("CHB"));
+    RefChannels.Add(wxT("Int.Ref"));
+    RefChannels.Add(wxT("Ext.Ref"));
+    Gatetime.Add(wxT("10ms"));
+    Gatetime.Add(wxT("100ms"));
+    Gatetime.Add(wxT("1s"));
+    Gatetime.Add(wxT("10s"));
+    wxBoxSizer *CHSizer = new wxBoxSizer(wxHORIZONTAL);
+    ChannelSelect = new wxComboBox(this,id,wxT("Measure Ch."),wxDefaultPosition,wxSize(1,40),MeasChannels,0,wxDefaultValidator,wxT("Channel"));
+    CHSizer->Add(ChannelSelect,5,wxALL,1);
+    RefChannelSelect = new wxComboBox(this,id,wxT("Reference Ch."),wxDefaultPosition,wxSize(1,40),RefChannels,0,wxDefaultValidator,wxT("Channel"));
+    CHSizer->Add(RefChannelSelect,5,wxALL,1);
+    GateTime = new wxComboBox(this,id,wxT("GateTime"),wxDefaultPosition,wxSize(1,40),Gatetime,0,wxDefaultValidator,wxT("Channel"));
+    CHSizer->Add(GateTime,5,wxALL,1);
+
+    ChannelSelect->Connect(wxEVT_COMBOBOX, wxKeyEventHandler(SigrokLcdFrame::RefreshParameters),NULL,this);
+    RefChannelSelect->Connect(wxEVT_COMBOBOX, wxKeyEventHandler(SigrokLcdFrame::RefreshParameters),NULL,this);
+    GateTime->Connect(wxEVT_COMBOBOX, wxKeyEventHandler(SigrokLcdFrame::RefreshParameters),NULL,this);
 
     bSizer1->Add(lcd_, 1, wxEXPAND, 5);
     bSizer1->Add(bSizer2, 0, wxEXPAND, 5);
 //
     bSizer0->Add(bSizer1, 1, wxEXPAND, 5);
+       bSizer0->Add(CHSizer, 0, wxEXPAND, 0);
 //    //bSizer0->Add(listbox1, 1, wxEXPAND, 5);
 //
     this->SetSizer(bSizer0);
     this->Layout();
     bSizer0->Fit(this);
 
+}
 
-
+void SigrokLcdFrame::RefreshParameters(wxKeyEvent& event)
+{
+//    int GateTimeSel = GateTime->GetSelection();
+//    Timebase = GateTime->GetString(GateTimeSel);
+//    int MeasChannelSel = ChannelSelect->GetSelection();
+//    MeasChannel = ChannelSelect->GetString(MeasChannelSel);
+//    int RefChannelSel = RefChannelSelect->GetSelection();
+//    RefChannel = RefChannelSelect->GetString(RefChannelSel);
+//    session_->stop();
+    //Bind(wxEVT_COMMAND_MENU_SELECTED,&SigrokLcdFrame::OnConnect,this,wxID_ANY);
 }
 
 void SigrokLcdFrame::OnQuit(wxCommandEvent& event)
@@ -172,6 +221,11 @@ void SigrokLcdFrame::OnQuit(wxCommandEvent& event)
 void SigrokLcdFrame::OnDisconnect(wxCommandEvent& event)
 {
     session_->stop();
+}
+
+void SigrokLcdFrame::OnCalib(wxCommandEvent& event)
+{
+    //session_->stop();
 }
 
 
@@ -210,69 +264,70 @@ void SigrokLcdFrame::OnConnect(wxCommandEvent& event)
     std::string SelectedDriver_std = std::string(SelectedDriver.mb_str());
     std::shared_ptr<sigrok::Driver> driver = driversMap[SelectedDriver_std];
     std::map<const sigrok::ConfigKey*, Glib::VariantBase> scanOptions;
-    wxString CONN = wxGetTextFromUser(wxT("Serial Port"),wxT("Select Serial Port")/*,last_Conn*/);
+
+    wxArrayString SerialPorts;
+    sp_list_ports(&ports);
+    char serialports[50] = {0};
+    int i = 0;
+    for(i = 0;ports[i];i++)
+    {
+        sprintf(serialports,"%s",sp_get_port_name(ports[i]));
+        wxString strports (wxString::FromUTF8(serialports));
+        SerialPorts.Add(strports);
+    }
+
+    wxString CONN = wxGetSingleChoice(wxT("Select One of the COM Ports"),wxT("Select..."),SerialPorts,lcd_);
+    //wxString CONN = wxGetTextFromUser(wxT("Serial Port"),wxT("Select Serial Port")/*,last_Conn*/);
+
     std::string CONN_std = std::string(CONN.mb_str());
     scanOptions[sigrok::ConfigKey::CONN] = Glib::Variant<Glib::ustring>::create(CONN_std);
     //scanOptions[sigrok::ConfigKey::SERIALCOMM] = Glib::Variant<Glib::ustring>::create(SERIALCOMM_std);
 //      scanOptions[sigrok::ConfigKey::LIMIT_SAMPLES] = Glib::Variant<Glib::ustring>::create("1");
     std::vector<std::shared_ptr<sigrok::HardwareDevice>> hwDevs = driver->scan(scanOptions);
     if(hwDevs.size() <= 0)
-        return;
-    else
-        ::wxMessageBox("Device found");
+    {
+        ::wxMessageBox("No Device found");
+                return;
+    }
     std::shared_ptr<sigrok::HardwareDevice> hwDev = hwDevs[0];
     hwDev->open();
 
     session_ = context_->create_session();
     session_->add_device(hwDev);
-    if(session_->devices().size() <= 0)
-        return;
+    //if(session_->devices().size() <= 0)
 
-    wxString LIMITSAMPLES = wxGetTextFromUser(wxT("Amount of samples\n0 or empty enable continuous sampling"),wxT("Choose...")/*,last_Conn*/);
-    uint64_t limitsamples = (uint64_t) wxAtoi(LIMITSAMPLES);
+//    wxString LIMITSAMPLES = wxGetTextFromUser(wxT("Amount of samples\n0 or empty enable continuous sampling"),wxT("Choose...")/*,last_Conn*/);
+//    uint64_t limitsamples = (uint64_t) wxAtoi(LIMITSAMPLES);
     wxString SAMPLERATE = wxGetTextFromUser(wxT("Samplerate \t[Hz]"),wxT("Choose..."));
     uint64_t samplerate = (uint64_t) wxAtoi(SAMPLERATE);
-    hwDev->config_set(sigrok::ConfigKey::LIMIT_SAMPLES , Glib::Variant<uint64_t>::create(limitsamples));
-    hwDev->config_set(sigrok::ConfigKey::SAMPLERATE , Glib::Variant<uint64_t>::create(samplerate));
 
-//    if (hwDev->config_check(sigrok::ConfigKey::LIMIT_SAMPLES, sigrok::Capability::GET))
-//    {
-//       ::wxMessageBox("GET Posible");
-////           auto gvar = hwDev->config_get(sigrok::ConfigKey::LIMIT_SAMPLES);
-//       //::wxMessageBox("GET VAR");
-////            sample_count = g_variant_get_uint64(gvar.gobj());
-////            ::wxMessageBox("Transformed");
-//
-//    }
-
-//    Glib::VariantContainerBase gvar_dict;
-//    if (hwDev->config_check(sigrok::ConfigKey::TIMEBASE, sigrok::Capability::LIST))
-//    {
-//        ::wxMessageBox("LIST POSSIBLE");
-//        gvar_dict = hwDev->config_list(sigrok::ConfigKey::TIMEBASE);
-//        ::wxMessageBox("LIST SAVED");
-//    }
-
-
-    auto dfcb = [=](std::shared_ptr<sigrok::Device> device, std::shared_ptr<sigrok::Packet> packet)
+    while(1)
     {
-        this->sigrok_datafeed_callback(device, packet);
-    };
-
-    session_->add_datafeed_callback(dfcb);
-
-
-    session_->set_stopped_callback(
-        [=]() {
-            sigrok_stopped_callback();
-        }
-    );
+        hwDev->config_set(sigrok::ConfigKey::LIMIT_SAMPLES , Glib::Variant<uint64_t>::create(2));
+        hwDev->config_set(sigrok::ConfigKey::SAMPLERATE , Glib::Variant<uint64_t>::create(samplerate));
+//        hwDev->config_set(sigrok::ConfigKey::CHANNEL_CONFIG , Glib::Variant<Glib::ustring>::create(MeasChannel));
+//        hwDev->config_set(sigrok::ConfigKey::DEVICE_MODE , Glib::Variant<Glib::ustring>::create(RefChannel));
+//        hwDev->config_set(sigrok::ConfigKey::TIMEBASE , Glib::Variant<Glib::ustring>::create(Timebase));
 
 
-    session_->start();
-    //::wxMessageBox("GET CONTEXt");
+        auto dfcb = [=](std::shared_ptr<sigrok::Device> device, std::shared_ptr<sigrok::Packet> packet)
+        {
+            this->sigrok_datafeed_callback(device, packet);
+        };
 
-    //::wxMessageBox("started");
+        session_->add_datafeed_callback(dfcb);
+
+
+
+        session_->set_stopped_callback(
+            [=]() {
+                sigrok_stopped_callback();
+            }
+        );
+
+        session_->start();
+        session_->run();
+    }
 
 }
 void SigrokLcdFrame::OnAbout(wxCommandEvent& event)
@@ -283,73 +338,88 @@ void SigrokLcdFrame::OnAbout(wxCommandEvent& event)
 
 void SigrokLcdFrame::sigrok_datafeed_callback(std::shared_ptr<sigrok::Device> hwDev, std::shared_ptr<sigrok::Packet> packet)
 {
+        float f;
+        int i = 0;
+        int exp_val = 0;
+        float exp =1;
+        float disp_val = 0;
     //::wxMessageBox("sigrok_datafeed_callback");
     if(packet->type() == sigrok::PacketType::ANALOG)
     {
         std::shared_ptr<sigrok::Analog> analogPacket = std::dynamic_pointer_cast<sigrok::Analog>(packet->payload());
 
-        float f;
-        int i = 0;
-        float exp_val = 0;
-        float exp =1;
-        float disp_val = 0;
-
-            analogPacket->get_data_as_float(&f);
-
-                ledmHz_->SetState(awxLED_OFF);
-                ledHz_->SetState(awxLED_OFF);
-                ledkHz_->SetState(awxLED_OFF);
-                ledMHz_->SetState(awxLED_OFF);
 
 
-                    exp_val = (log10(f));
+        analogPacket->get_data_as_float(&f);
 
-                    wxString expval = wxString::Format(_T("%10.6f"), exp_val);
-                    wxString getfloat = wxString::Format(_T("%10.6f"), f);
-                    //::wxMessageBox("exp: %s",getfloat);
-
-
-                    if(exp_val >= 6.0000)
-                    {
-                            exp_val = 6;
-                            ledMHz_->SetState(awxLED_ON);
-                    }
-                    else if(exp_val >= 3.00000)
-                    {
-                            exp_val = 3;
-                            ledkHz_->SetState(awxLED_ON);
-                    }
-                    else if(exp_val >= 0.00000)
-                    {
-                            exp_val = 0;
-                            ledHz_->SetState(awxLED_ON);
-                    }
-                    else if(exp_val >= -3.00000)
-                    {
-                            exp_val = -3;
-                            ledmHz_->SetState(awxLED_ON);
-                    }
-
-                    if(f<=0)
-                    {
-                        exp_val = 0;
-                        ledHz_->SetState(awxLED_ON);
-                    }
+        ledmHz_->SetState(awxLED_OFF);
+        ledHz_->SetState(awxLED_OFF);
+        ledkHz_->SetState(awxLED_OFF);
+        ledMHz_->SetState(awxLED_OFF);
+        ledMHz_->Refresh();
+        ledMHz_->Update();
+        ledkHz_->Refresh();
+        ledkHz_->Update();
+        ledHz_->Refresh();
+        ledHz_->Update();
+        ledmHz_->Refresh();
+        ledmHz_->Update();
 
 
-                    disp_val = f / pow(10,exp_val);
+        exp_val = (int)(log10(f));
 
-                wxString nextVal = wxString::Format(_T("%10.4f"), disp_val);
-                lcd_->SetValue(nextVal);
-                lcd_->Update();
+        wxString expval = wxString::Format(_T("%i"), exp_val);
+        wxString getfloat = wxString::Format(_T("%10.6f"), f);
+        //::wxMessageBox("exp: %s",getfloat);
+
+
+        if(exp_val >= 6)
+        {
+                exp_val = 6;
+                ledMHz_->SetState(awxLED_ON);
+                ledMHz_->Refresh();
+                ledMHz_->Update();
+        }
+        else if(exp_val >= 3)
+        {
+                exp_val = 3;
+                ledkHz_->SetState(awxLED_ON);
+                ledkHz_->Refresh();
+                ledkHz_->Update();
 
         }
+        else if(exp_val >= 0)
+        {
+                exp_val = 0;
+                ledHz_->SetState(awxLED_ON);
+                ledHz_->Refresh();
+                ledHz_->Update();
+        }
+        else if(exp_val >= -3)
+        {
+                exp_val = -3;
+                ledmHz_->SetState(awxLED_ON);
+                ledmHz_->Refresh();
+                ledmHz_->Update();
+        }
 
+//        if(f<=0)
+//        {
+//            exp_val = 0;
+//            ledHz_->SetState(awxLED_ON);
+//        }
+
+
+        disp_val = f / pow(10,exp_val);
+
+        wxString nextVal = wxString::Format(_T("%10.4f"), disp_val);
+        //::wxMessageBox(("%s"),expval);
+        lcd_->SetValue(nextVal);
+        lcd_->Refresh();
+        lcd_->Update();
+        }
 
 }
-
-
-
 
 SigrokLcdFrame::~SigrokLcdFrame()
 {
@@ -357,9 +427,7 @@ SigrokLcdFrame::~SigrokLcdFrame()
     //*)
 }
 
-
-
 void SigrokLcdFrame::sigrok_stopped_callback()
 {
-    //::wxMessageBox("sigrok_stopped_callback");
+    session_->stop();
 }
