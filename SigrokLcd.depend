@@ -957,7 +957,7 @@
 
 1474332885 /usr/include/wx-2.8/wx/gtk/stattext.h
 
-1517835729 /usr/local/include/libsigrokcxx/libsigrokcxx.hpp
+1518099401 /usr/local/include/libsigrokcxx/libsigrokcxx.hpp
 	<libsigrok/libsigrok.h>
 	<glibmm.h>
 	<stdexcept>
@@ -967,7 +967,7 @@
 	<set>
 	<libsigrokcxx/enums.hpp>
 
-1517835729 /usr/local/include/libsigrok/libsigrok.h
+1518099401 /usr/local/include/libsigrok/libsigrok.h
 	<stdio.h>
 	<sys/time.h>
 	<stdint.h>
@@ -1332,9 +1332,9 @@
 
 1499987019 /usr/include/glib-2.0/glib/glib-autocleanups.h
 
-1517835729 /usr/local/include/libsigrok/proto.h
+1518099401 /usr/local/include/libsigrok/proto.h
 
-1517835729 /usr/local/include/libsigrok/version.h
+1518099401 /usr/local/include/libsigrok/version.h
 
 1504102410 /usr/include/glibmm-2.4/glibmm.h
 	<glibmmconfig.h>
@@ -2051,7 +2051,7 @@
 	<type_traits>
 	<utility>
 
-1517835729 /usr/local/include/libsigrokcxx/enums.hpp
+1518099401 /usr/local/include/libsigrokcxx/enums.hpp
 
 1474332885 /usr/include/wx-2.8/wx/textctrl.h
 	"wx/defs.h"
@@ -4246,7 +4246,7 @@
 
 1504064262 /usr/include/wx-3.0/wx/gtk/app.h
 
-1517842885 /home/lj/git-repos/SigrokLCD/SigrokLcdMain.h
+1518092511 /home/lj/git-repos/SigrokLCD/SigrokLcdMain.h
 	<libsigrokcxx/libsigrokcxx.hpp>
 	"lcdwindow.h"
 	"led.h"
@@ -4375,7 +4375,7 @@
 
 1504064262 /usr/include/wx-3.0/wx/gtk/menu.h
 
-1516884285 source:/home/lj/git-repos/SigrokLCD/SigrokLcdMain.cpp
+1518099690 source:/home/lj/git-repos/SigrokLCD/SigrokLcdMain.cpp
 	"SigrokLcdMain.h"
 	<wx/msgdlg.h>
 	<wx/intl.h>
@@ -4395,8 +4395,10 @@
 	<wx/textctrl.h>
 	<wx/wxprec.h>
 	<wx/bookctrl.h>
-	<wx/combobox.h>
 	<wx/choicdlg.h>
+	<wx/event.h>
+	<string.h>
+	<stdio.h>
 	<libserialport.h>
 
 1504064261 /usr/include/wx-3.0/wx/msgdlg.h

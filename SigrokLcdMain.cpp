@@ -33,7 +33,8 @@
 #include <wx/bookctrl.h>
 #include <wx/choicdlg.h>
 #include <wx/event.h>
-
+#include <string.h>
+#include <stdio.h>
 
 #include <libserialport.h>
 
@@ -203,13 +204,54 @@ SigrokLcdFrame::SigrokLcdFrame(wxWindow* parent,wxWindowID id)
 
 void SigrokLcdFrame::RefreshParameters(wxKeyEvent& event)
 {
-//    int GateTimeSel = GateTime->GetSelection();
-//    Timebase = GateTime->GetString(GateTimeSel);
-//    int MeasChannelSel = ChannelSelect->GetSelection();
-//    MeasChannel = ChannelSelect->GetString(MeasChannelSel);
-//    int RefChannelSel = RefChannelSelect->GetSelection();
-//    RefChannel = RefChannelSelect->GetString(RefChannelSel);
-//    session_->stop();
+    int GateTimeSel = 0;
+    GateTimeSel = (GateTime->GetSelection())+2;
+    Timebase = GateTime->GetString(GateTimeSel);
+    int MeasChannelSel = 0;
+    MeasChannelSel = ChannelSelect->GetSelection();
+    MeasChannel = ChannelSelect->GetString(MeasChannelSel);
+    int RefChannelSel = 0;
+    RefChannelSel = RefChannelSelect->GetSelection();
+    RefChannel = RefChannelSelect->GetString(RefChannelSel);
+    session_->stop();
+
+    session_ = context_->create_session();
+    session_->add_device(hwDev);
+    hwDev->config_set(sigrok::ConfigKey::DATA_SOURCE , Glib::Variant<Glib::ustring>::create(MeasChannel));
+    hwDev->config_set(sigrok::ConfigKey::DEVICE_MODE , Glib::Variant<Glib::ustring>::create(RefChannel));
+    hwDev->config_set(sigrok::ConfigKey::LIMIT_MSEC , Glib::Variant<uint64_t>::create(GateTimeSel));
+
+    while(1)
+    {
+        hwDev->config_set(sigrok::ConfigKey::LIMIT_SAMPLES , Glib::Variant<uint64_t>::create(1));
+        hwDev->config_set(sigrok::ConfigKey::SAMPLERATE , Glib::Variant<uint64_t>::create(samplerate));
+        //::wxMessageBox(Timebase);
+//        hwDev->config_set(sigrok::ConfigKey::CHANNEL_CONFIG , Glib::Variant<Glib::ustring>::create(MeasChannel));
+
+
+//       hwDev->config_set(sigrok::ConfigKey::TIMEBASE , Glib::Variant<Glib::ustring>::create("100ms"));
+
+
+        auto dfcb = [=](std::shared_ptr<sigrok::Device> device, std::shared_ptr<sigrok::Packet> packet)
+        {
+            this->sigrok_datafeed_callback(device, packet);
+        };
+
+        session_->add_datafeed_callback(dfcb);
+
+
+
+        session_->set_stopped_callback(
+            [=]() {
+                sigrok_stopped_callback();
+            }
+        );
+
+        session_->start();
+        session_->run();
+    }
+
+
     //Bind(wxEVT_COMMAND_MENU_SELECTED,&SigrokLcdFrame::OnConnect,this,wxID_ANY);
 }
 
@@ -227,7 +269,6 @@ void SigrokLcdFrame::OnCalib(wxCommandEvent& event)
 {
     //session_->stop();
 }
-
 
 void SigrokLcdFrame::OnConnect(wxCommandEvent& event)
 {
@@ -289,22 +330,28 @@ void SigrokLcdFrame::OnConnect(wxCommandEvent& event)
         ::wxMessageBox("No Device found");
                 return;
     }
-    std::shared_ptr<sigrok::HardwareDevice> hwDev = hwDevs[0];
+    hwDev = hwDevs[0];
     hwDev->open();
 
-    session_ = context_->create_session();
-    session_->add_device(hwDev);
+
     //if(session_->devices().size() <= 0)
 
 //    wxString LIMITSAMPLES = wxGetTextFromUser(wxT("Amount of samples\n0 or empty enable continuous sampling"),wxT("Choose...")/*,last_Conn*/);
 //    uint64_t limitsamples = (uint64_t) wxAtoi(LIMITSAMPLES);
     wxString SAMPLERATE = wxGetTextFromUser(wxT("Samplerate \t[Hz]"),wxT("Choose..."));
-    uint64_t samplerate = (uint64_t) wxAtoi(SAMPLERATE);
+    samplerate = (uint64_t) wxAtoi(SAMPLERATE);
+
+    session_ = context_->create_session();
+    session_->add_device(hwDev);
+
+
 
     while(1)
     {
-        hwDev->config_set(sigrok::ConfigKey::LIMIT_SAMPLES , Glib::Variant<uint64_t>::create(2));
+        hwDev->config_set(sigrok::ConfigKey::LIMIT_SAMPLES , Glib::Variant<uint64_t>::create(1));
         hwDev->config_set(sigrok::ConfigKey::SAMPLERATE , Glib::Variant<uint64_t>::create(samplerate));
+        hwDev->config_set(sigrok::ConfigKey::DATA_SOURCE , Glib::Variant<Glib::ustring>::create(MeasChannel));
+        hwDev->config_set(sigrok::ConfigKey::DEVICE_MODE , Glib::Variant<Glib::ustring>::create(RefChannel));
 //        hwDev->config_set(sigrok::ConfigKey::CHANNEL_CONFIG , Glib::Variant<Glib::ustring>::create(MeasChannel));
 //        hwDev->config_set(sigrok::ConfigKey::DEVICE_MODE , Glib::Variant<Glib::ustring>::create(RefChannel));
 //        hwDev->config_set(sigrok::ConfigKey::TIMEBASE , Glib::Variant<Glib::ustring>::create(Timebase));

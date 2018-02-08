@@ -70,6 +70,7 @@ class SigrokLcdFrame: public wxFrame//, public wxThreadHelper
         awxLed *ledkHz_;
         awxLed *ledMHz_;
         uint8_t ledState_;
+        uint64_t samplerate;
 
         wxComboBox* ChannelSelect;
         wxComboBox* RefChannelSelect;
@@ -81,6 +82,7 @@ class SigrokLcdFrame: public wxFrame//, public wxThreadHelper
 
         std::shared_ptr<sigrok::Context> context_;
         std::shared_ptr<sigrok::Session> session_;
+        std::shared_ptr<sigrok::HardwareDevice> hwDev;
         void sigrok_datafeed_callback(std::shared_ptr<sigrok::Device> hwDev, std::shared_ptr<sigrok::Packet> packet);
         void sigrok_stopped_callback();
                 wxDECLARE_EVENT_TABLE();
@@ -100,6 +102,7 @@ class SigrokLcdFrame: public wxFrame//, public wxThreadHelper
         void OnDisconnect(wxCommandEvent& event);
         void OnCalib(wxCommandEvent& event);
         void OnSetup(wxCommandEvent& event);
+        void OnMeasure(wxCommandEvent& event);
         //*)
 
         //(*Identifiers(LcdTestFrame)
