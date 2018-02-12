@@ -225,13 +225,6 @@ void SigrokLcdFrame::RefreshParameters(wxKeyEvent& event)
     {
         hwDev->config_set(sigrok::ConfigKey::LIMIT_SAMPLES , Glib::Variant<uint64_t>::create(1));
         hwDev->config_set(sigrok::ConfigKey::SAMPLERATE , Glib::Variant<uint64_t>::create(samplerate));
-        //::wxMessageBox(Timebase);
-//        hwDev->config_set(sigrok::ConfigKey::CHANNEL_CONFIG , Glib::Variant<Glib::ustring>::create(MeasChannel));
-
-
-//       hwDev->config_set(sigrok::ConfigKey::TIMEBASE , Glib::Variant<Glib::ustring>::create("100ms"));
-
-
         auto dfcb = [=](std::shared_ptr<sigrok::Device> device, std::shared_ptr<sigrok::Packet> packet)
         {
             this->sigrok_datafeed_callback(device, packet);
