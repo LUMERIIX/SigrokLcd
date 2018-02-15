@@ -15,7 +15,12 @@ Supported Devices [Tested]: [FrequnecyCounter](https://github.com/LUMERIIX/Frequ
 <img align="center" width="800" height="400" src="https://github.com/LUMERIIX/SigrokLcd/blob/master/Screenshots/Lcd_Measure.png"> <br>
 
 ## Installing:<br>
-Comming Soon!
+Download the the repo:
+```
+git clone https://github.com/LUMERIIX/SigrokLcd
+cd SigrokLcd/bin
+./SigrokLcd
+```
 
 ## How to use it:
 **The GUI is self explanatory try it out!** <br>
