@@ -957,7 +957,7 @@
 
 1474332885 /usr/include/wx-2.8/wx/gtk/stattext.h
 
-1518704839 /usr/local/include/libsigrokcxx/libsigrokcxx.hpp
+1536249062 /usr/local/include/libsigrokcxx/libsigrokcxx.hpp
 	<libsigrok/libsigrok.h>
 	<glibmm.h>
 	<stdexcept>
@@ -967,7 +967,7 @@
 	<set>
 	<libsigrokcxx/enums.hpp>
 
-1518704839 /usr/local/include/libsigrok/libsigrok.h
+1536249062 /usr/local/include/libsigrok/libsigrok.h
 	<stdio.h>
 	<sys/time.h>
 	<stdint.h>
@@ -1060,21 +1060,21 @@
 	<alloca.h>
 	<malloc.h>
 
-1509144166 /usr/include/glib-2.0/glib/gtypes.h
+1523067022 /usr/include/glib-2.0/glib/gtypes.h
 	<glibconfig.h>
 	<glib/gmacros.h>
 	<glib/gversionmacros.h>
 	<time.h>
 
-1509549486 /usr/lib64/glib-2.0/include/glibconfig.h
+1528983997 /usr/lib64/glib-2.0/include/glibconfig.h
 	<glib/gmacros.h>
 	<limits.h>
 	<float.h>
 
-1509144166 /usr/include/glib-2.0/glib/gmacros.h
+1523067022 /usr/include/glib-2.0/glib/gmacros.h
 	<stddef.h>
 
-1509144166 /usr/include/glib-2.0/glib/gversionmacros.h
+1523067022 /usr/include/glib-2.0/glib/gversionmacros.h
 
 1499987019 /usr/include/glib-2.0/glib/garray.h
 	<glib/gtypes.h>
@@ -1087,7 +1087,7 @@
 	<glib/gerror.h>
 	<glib/gutils.h>
 
-1499987019 /usr/include/glib-2.0/glib/gatomic.h
+1520871817 /usr/include/glib-2.0/glib/gatomic.h
 	<glib/gtypes.h>
 
 1499987019 /usr/include/glib-2.0/glib/gerror.h
@@ -1097,12 +1097,14 @@
 1499987019 /usr/include/glib-2.0/glib/gquark.h
 	<glib/gtypes.h>
 
-1499987019 /usr/include/glib-2.0/glib/gutils.h
+1520871817 /usr/include/glib-2.0/glib/gutils.h
 	<glib/gtypes.h>
 	<stdarg.h>
+	<stdlib.h>
 
-1499987019 /usr/include/glib-2.0/glib/gbacktrace.h
+1515447259 /usr/include/glib-2.0/glib/gbacktrace.h
 	<glib/gtypes.h>
+	<sys/select.h>
 	<signal.h>
 
 1499987019 /usr/include/glib-2.0/glib/gbase64.h
@@ -1115,29 +1117,29 @@
 	<glib/gerror.h>
 	<time.h>
 
-1499987019 /usr/include/glib-2.0/glib/gbytes.h
+1510093734 /usr/include/glib-2.0/glib/gbytes.h
 	<glib/gtypes.h>
 	<glib/garray.h>
 
-1499987019 /usr/include/glib-2.0/glib/gcharset.h
+1523067022 /usr/include/glib-2.0/glib/gcharset.h
 	<glib/gtypes.h>
 
 1499987019 /usr/include/glib-2.0/glib/gchecksum.h
 	<glib/gtypes.h>
 	<glib/gbytes.h>
 
-1509144166 /usr/include/glib-2.0/glib/gconvert.h
+1517931860 /usr/include/glib-2.0/glib/gconvert.h
 	<glib/gerror.h>
 
 1499987019 /usr/include/glib-2.0/glib/gdataset.h
 	<glib/gquark.h>
 
-1509144166 /usr/include/glib-2.0/glib/gdate.h
+1515447259 /usr/include/glib-2.0/glib/gdate.h
 	<time.h>
 	<glib/gtypes.h>
 	<glib/gquark.h>
 
-1509144166 /usr/include/glib-2.0/glib/gdatetime.h
+1515447259 /usr/include/glib-2.0/glib/gdatetime.h
 	<glib/gtimezone.h>
 
 1499987019 /usr/include/glib-2.0/glib/gtimezone.h
@@ -1150,7 +1152,8 @@
 1499987019 /usr/include/glib-2.0/glib/genviron.h
 	<glib/gtypes.h>
 
-1499987019 /usr/include/glib-2.0/glib/gfileutils.h
+1516652882 /usr/include/glib-2.0/glib/gfileutils.h
+	<glibconfig.h>
 	<glib/gerror.h>
 
 1499987019 /usr/include/glib-2.0/glib/ggettext.h
@@ -1164,7 +1167,7 @@
 	<glib/gmem.h>
 	<glib/gnode.h>
 
-1499987019 /usr/include/glib-2.0/glib/gmem.h
+1515447259 /usr/include/glib-2.0/glib/gmem.h
 	<glib/gutils.h>
 
 1499987019 /usr/include/glib-2.0/glib/gnode.h
@@ -1185,7 +1188,7 @@
 	<glib/gmain.h>
 	<glib/gstring.h>
 
-1499987019 /usr/include/glib-2.0/glib/gmain.h
+1515447259 /usr/include/glib-2.0/glib/gmain.h
 	<glib/gpoll.h>
 	<glib/gslist.h>
 	<glib/gthread.h>
@@ -1204,11 +1207,11 @@
 	<glib/gbytes.h>
 	<glib/gutils.h>
 
-1499987019 /usr/include/glib-2.0/glib/gunicode.h
+1515447259 /usr/include/glib-2.0/glib/gunicode.h
 	<glib/gerror.h>
 	<glib/gtypes.h>
 
-1499987019 /usr/include/glib-2.0/glib/gkeyfile.h
+1517933156 /usr/include/glib-2.0/glib/gkeyfile.h
 	<glib/gbytes.h>
 	<glib/gerror.h>
 
@@ -1216,12 +1219,12 @@
 	<glib/gbytes.h>
 	<glib/gerror.h>
 
-1499987019 /usr/include/glib-2.0/glib/gmarkup.h
+1522595008 /usr/include/glib-2.0/glib/gmarkup.h
 	<stdarg.h>
 	<glib/gerror.h>
 	<glib/gslist.h>
 
-1499987019 /usr/include/glib-2.0/glib/gmessages.h
+1517931860 /usr/include/glib-2.0/glib/gmessages.h
 	<stdarg.h>
 	<glib/gtypes.h>
 	<glib/gmacros.h>
@@ -1254,7 +1257,7 @@
 1499987019 /usr/include/glib-2.0/glib/grand.h
 	<glib/gtypes.h>
 
-1509144166 /usr/include/glib-2.0/glib/gregex.h
+1515447259 /usr/include/glib-2.0/glib/gregex.h
 	<glib/gerror.h>
 	<glib/gstring.h>
 
@@ -1271,7 +1274,7 @@
 1499987019 /usr/include/glib-2.0/glib/gslice.h
 	<glib/gtypes.h>
 
-1509144166 /usr/include/glib-2.0/glib/gspawn.h
+1515447259 /usr/include/glib-2.0/glib/gspawn.h
 	<glib/gerror.h>
 
 1499987019 /usr/include/glib-2.0/glib/gstrfuncs.h
@@ -1283,11 +1286,12 @@
 1499987019 /usr/include/glib-2.0/glib/gstringchunk.h
 	<glib/gtypes.h>
 
-1509144166 /usr/include/glib-2.0/glib/gtestutils.h
+1515447259 /usr/include/glib-2.0/glib/gtestutils.h
 	<glib/gmessages.h>
 	<glib/gstring.h>
 	<glib/gerror.h>
 	<glib/gslist.h>
+	<string.h>
 
 1499987019 /usr/include/glib-2.0/glib/gthreadpool.h
 	<glib/gthread.h>
@@ -1332,9 +1336,9 @@
 
 1499987019 /usr/include/glib-2.0/glib/glib-autocleanups.h
 
-1518704839 /usr/local/include/libsigrok/proto.h
+1536249062 /usr/local/include/libsigrok/proto.h
 
-1518704839 /usr/local/include/libsigrok/version.h
+1536249062 /usr/local/include/libsigrok/version.h
 
 1504102410 /usr/include/glibmm-2.4/glibmm.h
 	<glibmmconfig.h>
@@ -1403,9 +1407,9 @@
 	<glibmm/weakref.h>
 	<glibmm/wrap.h>
 
-1505766213 /usr/lib64/glibmm-2.4/include/glibmmconfig.h
+1522703450 /usr/lib64/glibmm-2.4/include/glibmmconfig.h
 
-1505634873 /usr/include/glibmm-2.4/glibmm/thread.h
+1514540107 /usr/include/glibmm-2.4/glibmm/thread.h
 	<glibmmconfig.h>
 	<glib.h>
 	<glibmm/error.h>
@@ -1421,7 +1425,7 @@
 1504102410 /usr/include/glibmm-2.4/glibmm/exception.h
 	<glibmm/ustring.h>
 
-1504102410 /usr/include/glibmm-2.4/glibmm/ustring.h
+1505892748 /usr/include/glibmm-2.4/glibmm/ustring.h
 	<glibmmconfig.h>
 	<glibmm/unicode.h>
 	<glib.h>
@@ -1431,7 +1435,7 @@
 	<string>
 	<cstddef>
 
-1505634876 /usr/include/glibmm-2.4/glibmm/unicode.h
+1521555964 /usr/include/glibmm-2.4/glibmm/unicode.h
 	<glib.h>
 	<cctype>
 
@@ -1439,14 +1443,14 @@
 	<glib.h>
 	<glibmm/ustring.h>
 
-1501790807 /usr/include/sigc++-2.0/sigc++/sigc++.h
+1458127366 /usr/include/sigc++-2.0/sigc++/sigc++.h
 	<sigc++/signal.h>
 	<sigc++/connection.h>
 	<sigc++/trackable.h>
 	<sigc++/adaptors/adaptors.h>
 	<sigc++/functors/functors.h>
 
-1501790807 /usr/include/sigc++-2.0/sigc++/signal.h
+1474366432 /usr/include/sigc++-2.0/sigc++/signal.h
 	<list>
 	<sigc++/signal_base.h>
 	<sigc++/type_traits.h>
@@ -1454,7 +1458,7 @@
 	<sigc++/functors/slot.h>
 	<sigc++/functors/mem_fun.h>
 
-1501790807 /usr/include/sigc++-2.0/sigc++/signal_base.h
+1458127289 /usr/include/sigc++-2.0/sigc++/signal_base.h
 	<cstddef>
 	<list>
 	<sigc++config.h>
@@ -1463,26 +1467,26 @@
 	<sigc++/functors/slot.h>
 	<sigc++/functors/mem_fun.h>
 
-1501790808 /usr/lib64/sigc++-2.0/include/sigc++config.h
+1518080501 /usr/lib64/sigc++-2.0/include/sigc++config.h
 
-1501790807 /usr/include/sigc++-2.0/sigc++/type_traits.h
+1458127289 /usr/include/sigc++-2.0/sigc++/type_traits.h
 	<sigc++config.h>
 
-1501790807 /usr/include/sigc++-2.0/sigc++/trackable.h
+1458127289 /usr/include/sigc++-2.0/sigc++/trackable.h
 	<list>
 	<sigc++config.h>
 
-1501790807 /usr/include/sigc++-2.0/sigc++/functors/slot.h
+1474366432 /usr/include/sigc++-2.0/sigc++/functors/slot.h
 	<sigc++/trackable.h>
 	<sigc++/visit_each.h>
 	<sigc++/adaptors/adaptor_trait.h>
 	<sigc++/functors/slot_base.h>
 
-1501790807 /usr/include/sigc++-2.0/sigc++/visit_each.h
+1458127289 /usr/include/sigc++-2.0/sigc++/visit_each.h
 	<sigc++/type_traits.h>
 	<type_traits>
 
-1501790807 /usr/include/sigc++-2.0/sigc++/adaptors/adaptor_trait.h
+1474366432 /usr/include/sigc++-2.0/sigc++/adaptors/adaptor_trait.h
 	<sigc++config.h>
 	<sigc++/visit_each.h>
 	<sigc++/functors/functor_trait.h>
@@ -1490,37 +1494,37 @@
 	<sigc++/functors/mem_fun.h>
 	<sigc++/adaptors/deduce_result_type.h>
 
-1501790807 /usr/include/sigc++-2.0/sigc++/functors/functor_trait.h
+1474366432 /usr/include/sigc++-2.0/sigc++/functors/functor_trait.h
 	<sigc++/type_traits.h>
 	<type_traits>
 
-1501790807 /usr/include/sigc++-2.0/sigc++/functors/ptr_fun.h
+1474366432 /usr/include/sigc++-2.0/sigc++/functors/ptr_fun.h
 	<sigc++/type_traits.h>
 	<sigc++/functors/functor_trait.h>
 
-1501790807 /usr/include/sigc++-2.0/sigc++/functors/mem_fun.h
+1474366432 /usr/include/sigc++-2.0/sigc++/functors/mem_fun.h
 	<sigc++/type_traits.h>
 	<sigc++/functors/functor_trait.h>
 	<sigc++/limit_reference.h>
 
-1501790807 /usr/include/sigc++-2.0/sigc++/limit_reference.h
+1474366432 /usr/include/sigc++-2.0/sigc++/limit_reference.h
 	<sigc++/visit_each.h>
 	<sigc++/type_traits.h>
 	<sigc++/trackable.h>
 
-1501790807 /usr/include/sigc++-2.0/sigc++/adaptors/deduce_result_type.h
+1474366432 /usr/include/sigc++-2.0/sigc++/adaptors/deduce_result_type.h
 	<sigc++/functors/functor_trait.h>
 
-1501790807 /usr/include/sigc++-2.0/sigc++/functors/slot_base.h
+1459505199 /usr/include/sigc++-2.0/sigc++/functors/slot_base.h
 	<sigc++config.h>
 	<sigc++/trackable.h>
 	<sigc++/functors/functor_trait.h>
 
-1501790807 /usr/include/sigc++-2.0/sigc++/connection.h
+1458127289 /usr/include/sigc++-2.0/sigc++/connection.h
 	<sigc++config.h>
 	<sigc++/signal.h>
 
-1501790807 /usr/include/sigc++-2.0/sigc++/adaptors/adaptors.h
+1458127289 /usr/include/sigc++-2.0/sigc++/adaptors/adaptors.h
 	<sigc++/adaptors/bind.h>
 	<sigc++/adaptors/bind_return.h>
 	<sigc++/adaptors/hide.h>
@@ -1530,49 +1534,49 @@
 	<sigc++/adaptors/exception_catch.h>
 	<sigc++/adaptors/track_obj.h>
 
-1501790807 /usr/include/sigc++-2.0/sigc++/adaptors/bind.h
+1474366432 /usr/include/sigc++-2.0/sigc++/adaptors/bind.h
 	<sigc++/adaptors/adaptor_trait.h>
 	<sigc++/adaptors/bound_argument.h>
 
-1501790807 /usr/include/sigc++-2.0/sigc++/adaptors/bound_argument.h
+1458127289 /usr/include/sigc++-2.0/sigc++/adaptors/bound_argument.h
 	<sigc++/limit_reference.h>
 	<sigc++/reference_wrapper.h>
 
-1501790807 /usr/include/sigc++-2.0/sigc++/reference_wrapper.h
+1458127289 /usr/include/sigc++-2.0/sigc++/reference_wrapper.h
 	<functional>
 
-1501790807 /usr/include/sigc++-2.0/sigc++/adaptors/bind_return.h
+1474366432 /usr/include/sigc++-2.0/sigc++/adaptors/bind_return.h
 	<sigc++/adaptors/adaptor_trait.h>
 	<sigc++/adaptors/bound_argument.h>
 
-1501790807 /usr/include/sigc++-2.0/sigc++/adaptors/hide.h
+1474366432 /usr/include/sigc++-2.0/sigc++/adaptors/hide.h
 	<sigc++/adaptors/adaptor_trait.h>
 
-1501790807 /usr/include/sigc++-2.0/sigc++/adaptors/retype_return.h
+1474366432 /usr/include/sigc++-2.0/sigc++/adaptors/retype_return.h
 	<sigc++/adaptors/adaptor_trait.h>
 
-1501790807 /usr/include/sigc++-2.0/sigc++/adaptors/retype.h
+1474366432 /usr/include/sigc++-2.0/sigc++/adaptors/retype.h
 	<sigc++/adaptors/adaptor_trait.h>
 	<sigc++/functors/ptr_fun.h>
 	<sigc++/functors/mem_fun.h>
 	<sigc++/functors/slot.h>
 
-1501790807 /usr/include/sigc++-2.0/sigc++/adaptors/compose.h
+1474366432 /usr/include/sigc++-2.0/sigc++/adaptors/compose.h
 	<sigc++/adaptors/adaptor_trait.h>
 
-1501790807 /usr/include/sigc++-2.0/sigc++/adaptors/exception_catch.h
+1474366432 /usr/include/sigc++-2.0/sigc++/adaptors/exception_catch.h
 	<sigc++/adaptors/adaptor_trait.h>
 
-1501790807 /usr/include/sigc++-2.0/sigc++/adaptors/track_obj.h
+1474366432 /usr/include/sigc++-2.0/sigc++/adaptors/track_obj.h
 	<sigc++/adaptors/adaptor_trait.h>
 	<sigc++/limit_reference.h>
 
-1501790807 /usr/include/sigc++-2.0/sigc++/functors/functors.h
+1458127289 /usr/include/sigc++-2.0/sigc++/functors/functors.h
 	<sigc++/functors/slot.h>
 	<sigc++/functors/ptr_fun.h>
 	<sigc++/functors/mem_fun.h>
 
-1505634874 /usr/include/glibmm-2.4/glibmm/threads.h
+1514540108 /usr/include/glibmm-2.4/glibmm/threads.h
 	<glibmmconfig.h>
 	<glib.h>
 	<glibmm/error.h>
@@ -1599,12 +1603,12 @@
 	<deque>
 	<list>
 
-1504102410 /usr/include/glibmm-2.4/glibmm/refptr.h
+1521620211 /usr/include/glibmm-2.4/glibmm/refptr.h
 	<glibmmconfig.h>
 	<glib.h>
 	<utility>
 
-1505639908 /usr/include/glibmm-2.4/glibmm/variant.h
+1516283438 /usr/include/glibmm-2.4/glibmm/variant.h
 	<glibmmconfig.h>
 	<glibmm/varianttype.h>
 	<glibmm/variantiter.h>
@@ -1621,7 +1625,7 @@
 	<cstddef>
 	<glibmm/variant_basictypes.h>
 
-1505634882 /usr/include/glibmm-2.4/glibmm/varianttype.h
+1514540116 /usr/include/glibmm-2.4/glibmm/varianttype.h
 	<glibmmconfig.h>
 	<glib-object.h>
 	<string>
@@ -1644,11 +1648,11 @@
 	<gobject/gvaluetypes.h>
 	<gobject/gobject-autocleanups.h>
 
-1499987019 /usr/include/glib-2.0/gobject/gbinding.h
+1514689730 /usr/include/glib-2.0/gobject/gbinding.h
 	<glib.h>
 	<gobject/gobject.h>
 
-1499987019 /usr/include/glib-2.0/gobject/gobject.h
+1515447259 /usr/include/glib-2.0/gobject/gobject.h
 	<gobject/gtype.h>
 	<gobject/gvalue.h>
 	<gobject/gparam.h>
@@ -1656,10 +1660,10 @@
 	<gobject/gsignal.h>
 	<gobject/gboxed.h>
 
-1499987019 /usr/include/glib-2.0/gobject/gtype.h
+1520871817 /usr/include/glib-2.0/gobject/gtype.h
 	<glib.h>
 
-1509144166 /usr/include/glib-2.0/gobject/gvalue.h
+1515447259 /usr/include/glib-2.0/gobject/gvalue.h
 	<gobject/gtype.h>
 
 1499987019 /usr/include/glib-2.0/gobject/gparam.h
@@ -1668,7 +1672,7 @@
 1499987019 /usr/include/glib-2.0/gobject/gclosure.h
 	<gobject/gtype.h>
 
-1499987019 /usr/include/glib-2.0/gobject/gsignal.h
+1509532053 /usr/include/glib-2.0/gobject/gsignal.h
 	<gobject/gclosure.h>
 	<gobject/gvalue.h>
 	<gobject/gparam.h>
@@ -1696,7 +1700,7 @@
 	<gobject/gclosure.h>
 	<gobject/glib-types.h>
 
-1499987019 /usr/include/glib-2.0/gobject/gtypemodule.h
+1516652882 /usr/include/glib-2.0/gobject/gtypemodule.h
 	<gobject/gobject.h>
 	<gobject/genums.h>
 
@@ -1711,7 +1715,7 @@
 
 1503149960 /usr/include/glib-2.0/gobject/gobject-autocleanups.h
 
-1505634881 /usr/include/glibmm-2.4/glibmm/variantiter.h
+1514540115 /usr/include/glibmm-2.4/glibmm/variantiter.h
 	<glib.h>
 
 1504103327 /usr/include/glibmm-2.4/glibmm/variant_basictypes.h
@@ -1769,7 +1773,7 @@
 	<glibmm/value_custom.h>
 	<glibmm/value_basictypes.h>
 
-1505634858 /usr/include/glibmm-2.4/glibmm/enums.h
+1521555946 /usr/include/glibmm-2.4/glibmm/enums.h
 	<glib.h>
 
 1504102410 /usr/include/glibmm-2.4/glibmm/value_custom.h
@@ -1788,7 +1792,7 @@
 	<glibmmconfig.h>
 	<glib.h>
 
-1505634851 /usr/include/glibmm-2.4/glibmm/balancedtree.h
+1514540086 /usr/include/glibmm-2.4/glibmm/balancedtree.h
 	<glibmm/refptr.h>
 	<glibmm/ustring.h>
 	<glibmm/error.h>
@@ -1799,7 +1803,7 @@
 	<string>
 	<glib.h>
 
-1505634852 /usr/include/glibmm-2.4/glibmm/binding.h
+1514540087 /usr/include/glibmm-2.4/glibmm/binding.h
 	<glibmm/object.h>
 	<glibmm/refptr.h>
 	<glibmm/ustring.h>
@@ -1822,7 +1826,7 @@
 	<glib.h>
 	<memory>
 
-1505634853 /usr/include/glibmm-2.4/glibmm/bytearray.h
+1514540089 /usr/include/glibmm-2.4/glibmm/bytearray.h
 	<cstddef>
 	<sigc++/slot.h>
 	<glibmm/refptr.h>
@@ -1830,10 +1834,10 @@
 	<glibmm/wrap.h>
 	<glib.h>
 
-1501790807 /usr/include/sigc++-2.0/sigc++/slot.h
+1458127289 /usr/include/sigc++-2.0/sigc++/slot.h
 	<sigc++/functors/slot.h>
 
-1505634853 /usr/include/glibmm-2.4/glibmm/bytes.h
+1514540088 /usr/include/glibmm-2.4/glibmm/bytes.h
 	<glibmmconfig.h>
 	<glibmm/refptr.h>
 	<glibmm/ustring.h>
@@ -1841,23 +1845,23 @@
 	<glibmm/arrayhandle.h>
 	<glib.h>
 
-1505634854 /usr/include/glibmm-2.4/glibmm/checksum.h
+1521555942 /usr/include/glibmm-2.4/glibmm/checksum.h
 	<glib.h>
 	<string>
 
-1505634855 /usr/include/glibmm-2.4/glibmm/convert.h
+1521555943 /usr/include/glibmm-2.4/glibmm/convert.h
 	<glibmmconfig.h>
 	<glibmm/error.h>
 	<glibmm/ustring.h>
 	<glib.h>
 
-1505634856 /usr/include/glibmm-2.4/glibmm/date.h
+1514540092 /usr/include/glibmm-2.4/glibmm/date.h
 	<glibmmconfig.h>
 	<glibmm/ustring.h>
 	<glib.h>
 	<ctime>
 
-1505634857 /usr/include/glibmm-2.4/glibmm/datetime.h
+1521555945 /usr/include/glibmm-2.4/glibmm/datetime.h
 	<glibmmconfig.h>
 	<glibmm/refptr.h>
 	<glibmm/ustring.h>
@@ -1867,7 +1871,7 @@
 	<sigc++/sigc++.h>
 	<glibmm/main.h>
 
-1504102410 /usr/include/glibmm-2.4/glibmm/main.h
+1516277114 /usr/include/glibmm-2.4/glibmm/main.h
 	<glibmmconfig.h>
 	<glibmm/refptr.h>
 	<glibmm/timeval.h>
@@ -1879,7 +1883,7 @@
 
 1504102410 /usr/include/glibmm-2.4/glibmm/priorities.h
 
-1505634861 /usr/include/glibmm-2.4/glibmm/iochannel.h
+1514540096 /usr/include/glibmm-2.4/glibmm/iochannel.h
 	<glibmmconfig.h>
 	<glib.h>
 	<glibmm/error.h>
@@ -1892,7 +1896,7 @@
 	<glibmmconfig.h>
 	<sigc++/sigc++.h>
 
-1505634859 /usr/include/glibmm-2.4/glibmm/fileutils.h
+1514540095 /usr/include/glibmm-2.4/glibmm/fileutils.h
 	<glibmm/error.h>
 	<iterator>
 	<string>
@@ -1918,7 +1922,7 @@
 
 1504102410 /usr/include/glibmm-2.4/glibmm/init.h
 
-1505634862 /usr/include/glibmm-2.4/glibmm/keyfile.h
+1521555949 /usr/include/glibmm-2.4/glibmm/keyfile.h
 	<glibmmconfig.h>
 	<glibmm/ustring.h>
 	<glibmm/arrayhandle.h>
@@ -1936,19 +1940,19 @@
 	<glibmm/containerhandle_shared.h>
 	<glib.h>
 
-1505634863 /usr/include/glibmm-2.4/glibmm/markup.h
+1514540098 /usr/include/glibmm-2.4/glibmm/markup.h
 	<glibmm/error.h>
 	<sigc++/sigc++.h>
 	<map>
 
-1505634864 /usr/include/glibmm-2.4/glibmm/miscutils.h
+1521555951 /usr/include/glibmm-2.4/glibmm/miscutils.h
 	<glibmm/arrayhandle.h>
 	<glibmm/ustring.h>
 
-1505634865 /usr/include/glibmm-2.4/glibmm/module.h
+1521556503 /usr/include/glibmm-2.4/glibmm/module.h
 	<string>
 
-1505634866 /usr/include/glibmm-2.4/glibmm/nodetree.h
+1514540101 /usr/include/glibmm-2.4/glibmm/nodetree.h
 	<map>
 	<stack>
 	<deque>
@@ -1958,16 +1962,16 @@
 	<glibmm/arrayhandle.h>
 	<glib.h>
 
-1505634867 /usr/include/glibmm-2.4/glibmm/optioncontext.h
+1514540102 /usr/include/glibmm-2.4/glibmm/optioncontext.h
 	<glibmm/optionentry.h>
 	<glibmm/optiongroup.h>
 	<glibmm/error.h>
 	<sigc++/signal.h>
 
-1505634868 /usr/include/glibmm-2.4/glibmm/optionentry.h
+1514540103 /usr/include/glibmm-2.4/glibmm/optionentry.h
 	<glibmm/ustring.h>
 
-1505634869 /usr/include/glibmm-2.4/glibmm/optiongroup.h
+1514540104 /usr/include/glibmm-2.4/glibmm/optiongroup.h
 	<glibmm/ustring.h>
 	<sigc++/slot.h>
 	<map>
@@ -1985,7 +1989,7 @@
 1504102410 /usr/include/glibmm-2.4/glibmm/random.h
 	<glib.h>
 
-1505634870 /usr/include/glibmm-2.4/glibmm/regex.h
+1521555958 /usr/include/glibmm-2.4/glibmm/regex.h
 	<glibmmconfig.h>
 	<glibmm/refptr.h>
 	<glibmm/ustring.h>
@@ -1993,7 +1997,7 @@
 	<glibmm/arrayhandle.h>
 	<glib.h>
 
-1505634871 /usr/include/glibmm-2.4/glibmm/shell.h
+1514540105 /usr/include/glibmm-2.4/glibmm/shell.h
 	<glibmm/arrayhandle.h>
 	<glibmm/error.h>
 	<glib.h>
@@ -2004,7 +2008,7 @@
 	<glibmm/containerhandle_shared.h>
 	<glib.h>
 
-1505634872 /usr/include/glibmm-2.4/glibmm/spawn.h
+1514540106 /usr/include/glibmm-2.4/glibmm/spawn.h
 	<glibmmconfig.h>
 	<glibmm/arrayhandle.h>
 	<glibmm/error.h>
@@ -2020,22 +2024,22 @@
 
 1504102410 /usr/include/glibmm-2.4/glibmm/timer.h
 
-1505634875 /usr/include/glibmm-2.4/glibmm/timezone.h
+1514540109 /usr/include/glibmm-2.4/glibmm/timezone.h
 	<glibmmconfig.h>
 	<glibmm/refptr.h>
 	<glibmm/ustring.h>
 	<glib.h>
 
-1505634877 /usr/include/glibmm-2.4/glibmm/uriutils.h
+1514540111 /usr/include/glibmm-2.4/glibmm/uriutils.h
 	<string>
 
-1505634878 /usr/include/glibmm-2.4/glibmm/valuearray.h
+1514540112 /usr/include/glibmm-2.4/glibmm/valuearray.h
 	<glibmmconfig.h>
 	<glib-object.h>
 	<glibmm/value.h>
 	<sigc++/functors/slot.h>
 
-1505634880 /usr/include/glibmm-2.4/glibmm/variantdict.h
+1514540114 /usr/include/glibmm-2.4/glibmm/variantdict.h
 	<glibmm/variant.h>
 
 1504102410 /usr/include/glibmm-2.4/glibmm/vectorutils.h
@@ -2051,7 +2055,7 @@
 	<type_traits>
 	<utility>
 
-1518704839 /usr/local/include/libsigrokcxx/enums.hpp
+1536249062 /usr/local/include/libsigrokcxx/enums.hpp
 
 1474332885 /usr/include/wx-2.8/wx/textctrl.h
 	"wx/defs.h"
@@ -3345,10 +3349,10 @@
 	<wx/dcclient.h>
 	<wx/window.h>
 
-1504064261 /usr/include/wx-3.0/wx/dcclient.h
+1521590332 /usr/include/wx-3.0/wx/dcclient.h
 	"wx/dc.h"
 
-1504064261 /usr/include/wx-3.0/wx/dc.h
+1521590332 /usr/include/wx-3.0/wx/dc.h
 	"wx/object.h"
 	"wx/intl.h"
 	"wx/cursor.h"
@@ -3364,20 +3368,20 @@
 	"wx/region.h"
 	"wx/affinematrix2d.h"
 
-1504064261 /usr/include/wx-3.0/wx/object.h
+1521590331 /usr/include/wx-3.0/wx/object.h
 	"wx/memory.h"
 	"wx/xti.h"
 	"wx/rtti.h"
 	"wx/xti2.h"
 	"wx/msw/msvcrt.h"
 
-1504064261 /usr/include/wx-3.0/wx/memory.h
+1521590331 /usr/include/wx-3.0/wx/memory.h
 	"wx/defs.h"
 	"wx/string.h"
 	"wx/msgout.h"
 	<stddef.h>
 
-1504064260 /usr/include/wx-3.0/wx/defs.h
+1521590331 /usr/include/wx-3.0/wx/defs.h
 	"wx/platform.h"
 	"wx/version.h"
 	"wx/dlimpexp.h"
@@ -3390,7 +3394,7 @@
 	"wx/msw/winundef.h"
 	"wx/features.h"
 
-1504064261 /usr/include/wx-3.0/wx/platform.h
+1521590331 /usr/include/wx-3.0/wx/platform.h
 	<unistd.h>
 	<TargetConditionals.h>
 	<AvailabilityMacros.h>
@@ -3405,11 +3409,11 @@
 	<AvailabilityMacros.h>
 	"wx/chkconf.h"
 
-1504064260 /usr/include/wx-3.0/wx/compiler.h
+1521590331 /usr/include/wx-3.0/wx/compiler.h
 
-1504064260 /usr/lib64/wx/include/gtk3-unicode-3.0/wx/setup.h
+1521590331 /usr/lib64/wx/include/gtk3-unicode-3.0/wx/setup.h
 
-1504064260 /usr/include/wx-3.0/wx/chkconf.h
+1521590331 /usr/include/wx-3.0/wx/chkconf.h
 	"wx/msw/wince/chkconf.h"
 	"wx/msw/chkconf.h"
 	"wx/gtk/chkconf.h"
@@ -3424,26 +3428,26 @@
 	"wx/unix/chkconf.h"
 	"wx/univ/chkconf.h"
 
-1504064262 /usr/include/wx-3.0/wx/gtk/chkconf.h
+1521590333 /usr/include/wx-3.0/wx/gtk/chkconf.h
 
-1504064261 /usr/include/wx-3.0/wx/unix/chkconf.h
+1521590331 /usr/include/wx-3.0/wx/unix/chkconf.h
 
-1504064261 /usr/include/wx-3.0/wx/version.h
+1521590331 /usr/include/wx-3.0/wx/version.h
 	"wx/cpp.h"
 
-1504064260 /usr/include/wx-3.0/wx/cpp.h
+1521590331 /usr/include/wx-3.0/wx/cpp.h
 	"wx/compiler.h"
 
-1504064260 /usr/include/wx-3.0/wx/dlimpexp.h
+1521590331 /usr/include/wx-3.0/wx/dlimpexp.h
 
-1504064260 /usr/include/wx-3.0/wx/debug.h
+1521590331 /usr/include/wx-3.0/wx/debug.h
 	<assert.h>
 	<limits.h>
 	"wx/chartype.h"
 	"wx/cpp.h"
 	"wx/dlimpexp.h"
 
-1504064260 /usr/include/wx-3.0/wx/chartype.h
+1521590331 /usr/include/wx-3.0/wx/chartype.h
 	"wx/platform.h"
 	<sys/types.h>
 	<wchar.h>
@@ -3457,11 +3461,11 @@
 	<tchar.h>
 	<ctype.h>
 
-1504064262 /usr/include/wx-3.0/wx/windowid.h
+1521590332 /usr/include/wx-3.0/wx/windowid.h
 
-1504064261 /usr/include/wx-3.0/wx/features.h
+1521590331 /usr/include/wx-3.0/wx/features.h
 
-1504064261 /usr/include/wx-3.0/wx/string.h
+1521590331 /usr/include/wx-3.0/wx/string.h
 	"wx/defs.h"
 	<ctype.h>
 	<stdio.h>
@@ -3484,7 +3488,7 @@
 	"wx/iosfwrap.h"
 	"wx/crt.h"
 
-1504064261 /usr/include/wx-3.0/wx/wxcrtbase.h
+1521590331 /usr/include/wx-3.0/wx/wxcrtbase.h
 	"wx/chartype.h"
 	<stdio.h>
 	<string.h>
@@ -3493,7 +3497,7 @@
 	<time.h>
 	<io.h>
 
-1504064261 /usr/include/wx-3.0/wx/strvararg.h
+1521590331 /usr/include/wx-3.0/wx/strvararg.h
 	"wx/platform.h"
 	"wx/cpp.h"
 	"wx/chartype.h"
@@ -3505,7 +3509,7 @@
 	<tr1/type_traits>
 	"wx/stringimpl.h"
 
-1504064261 /usr/include/wx-3.0/wx/strconv.h
+1521590331 /usr/include/wx-3.0/wx/strconv.h
 	"wx/defs.h"
 	"wx/chartype.h"
 	"wx/buffer.h"
@@ -3513,24 +3517,24 @@
 	<stdlib.h>
 	"wx/fontenc.h"
 
-1504064260 /usr/include/wx-3.0/wx/buffer.h
+1521590331 /usr/include/wx-3.0/wx/buffer.h
 	"wx/chartype.h"
 	"wx/wxcrtbase.h"
 	<stdlib.h>
 
-1504064261 /usr/include/wx-3.0/wx/typeinfo.h
+1521590331 /usr/include/wx-3.0/wx/typeinfo.h
 	"wx/defs.h"
 	<typeinfo>
 	<string.h>
 
-1504064261 /usr/include/wx-3.0/wx/fontenc.h
+1521590331 /usr/include/wx-3.0/wx/fontenc.h
 
-1504064261 /usr/include/wx-3.0/wx/unichar.h
+1521590331 /usr/include/wx-3.0/wx/unichar.h
 	"wx/defs.h"
 	"wx/chartype.h"
 	"wx/stringimpl.h"
 
-1504064261 /usr/include/wx-3.0/wx/stringimpl.h
+1521590331 /usr/include/wx-3.0/wx/stringimpl.h
 	"wx/defs.h"
 	"wx/chartype.h"
 	"wx/wxcrtbase.h"
@@ -3539,60 +3543,60 @@
 	<string>
 	"wx/afterstd.h"
 
-1504064260 /usr/include/wx-3.0/wx/beforestd.h
+1521590331 /usr/include/wx-3.0/wx/beforestd.h
 
-1504064260 /usr/include/wx-3.0/wx/afterstd.h
+1521590331 /usr/include/wx-3.0/wx/afterstd.h
 	"wx/msw/winundef.h"
 
-1504064261 /usr/include/wx-3.0/wx/stringops.h
+1521590331 /usr/include/wx-3.0/wx/stringops.h
 	"wx/chartype.h"
 	"wx/stringimpl.h"
 	"wx/unichar.h"
 	"wx/buffer.h"
 
-1504064261 /usr/include/wx-3.0/wx/tls.h
+1521590331 /usr/include/wx-3.0/wx/tls.h
 	"wx/defs.h"
 	"wx/msw/tls.h"
 	"wx/os2/tls.h"
 	"wx/unix/tls.h"
 	<stdlib.h>
 
-1504064261 /usr/include/wx-3.0/wx/unix/tls.h
+1521590331 /usr/include/wx-3.0/wx/unix/tls.h
 	<pthread.h>
 
-1504064261 /usr/include/wx-3.0/wx/iosfwrap.h
+1521590331 /usr/include/wx-3.0/wx/iosfwrap.h
 	<iostream.h>
 	<iosfwd>
 	"wx/msw/winundef.h"
 
-1504064260 /usr/include/wx-3.0/wx/crt.h
+1521590331 /usr/include/wx-3.0/wx/crt.h
 	"wx/defs.h"
 	"wx/chartype.h"
 	"wx/wxcrt.h"
 	"wx/wxcrtvararg.h"
 
-1504064261 /usr/include/wx-3.0/wx/wxcrt.h
+1521590331 /usr/include/wx-3.0/wx/wxcrt.h
 	"wx/wxcrtbase.h"
 	"wx/string.h"
 	<string.h>
 
-1504064261 /usr/include/wx-3.0/wx/wxcrtvararg.h
+1521590331 /usr/include/wx-3.0/wx/wxcrtvararg.h
 	"wx/wxcrt.h"
 	"wx/strvararg.h"
 	"wx/string.h"
 	<stdarg.h>
 
-1504064261 /usr/include/wx-3.0/wx/msgout.h
+1521590331 /usr/include/wx-3.0/wx/msgout.h
 	"wx/defs.h"
 	"wx/chartype.h"
 	"wx/strvararg.h"
 
-1504064261 /usr/include/wx-3.0/wx/xti.h
+1521590331 /usr/include/wx-3.0/wx/xti.h
 	"wx/defs.h"
 	"wx/xtitypes.h"
 	"wx/xtihandler.h"
 
-1504064261 /usr/include/wx-3.0/wx/xtitypes.h
+1521590331 /usr/include/wx-3.0/wx/xtitypes.h
 	"wx/defs.h"
 	"wx/string.h"
 	"wx/hashmap.h"
@@ -3602,7 +3606,7 @@
 	"wx/log.h"
 	<typeinfo>
 
-1504064261 /usr/include/wx-3.0/wx/hashmap.h
+1521590331 /usr/include/wx-3.0/wx/hashmap.h
 	"wx/string.h"
 	"wx/wxcrt.h"
 	<unordered_map>
@@ -3611,7 +3615,7 @@
 	<hash_map>
 	<stddef.h>
 
-1504064260 /usr/include/wx-3.0/wx/arrstr.h
+1521590331 /usr/include/wx-3.0/wx/arrstr.h
 	"wx/defs.h"
 	"wx/string.h"
 	"wx/dynarray.h"
@@ -3619,23 +3623,23 @@
 	<iterator>
 	"wx/afterstd.h"
 
-1504064260 /usr/include/wx-3.0/wx/dynarray.h
+1521590331 /usr/include/wx-3.0/wx/dynarray.h
 	"wx/defs.h"
 	"wx/beforestd.h"
 	<vector>
 	<algorithm>
 	"wx/afterstd.h"
 
-1504064261 /usr/include/wx-3.0/wx/flags.h
+1521590331 /usr/include/wx-3.0/wx/flags.h
 
-1504064261 /usr/include/wx-3.0/wx/intl.h
+1521590331 /usr/include/wx-3.0/wx/intl.h
 	"wx/defs.h"
 	"wx/string.h"
 	"wx/translation.h"
 	"wx/fontenc.h"
 	"wx/language.h"
 
-1504064261 /usr/include/wx-3.0/wx/translation.h
+1521590331 /usr/include/wx-3.0/wx/translation.h
 	"wx/defs.h"
 	"wx/string.h"
 	"wx/buffer.h"
@@ -3644,17 +3648,17 @@
 	"wx/strconv.h"
 	"wx/scopedptr.h"
 
-1504064261 /usr/include/wx-3.0/wx/language.h
+1521590331 /usr/include/wx-3.0/wx/language.h
 	"wx/defs.h"
 
-1504064261 /usr/include/wx-3.0/wx/scopedptr.h
+1521590331 /usr/include/wx-3.0/wx/scopedptr.h
 	"wx/defs.h"
 	"wx/checkeddelete.h"
 
-1504064260 /usr/include/wx-3.0/wx/checkeddelete.h
+1521590331 /usr/include/wx-3.0/wx/checkeddelete.h
 	"wx/cpp.h"
 
-1504064261 /usr/include/wx-3.0/wx/log.h
+1521590331 /usr/include/wx-3.0/wx/log.h
 	"wx/defs.h"
 	"wx/cpp.h"
 	"wx/string.h"
@@ -3668,29 +3672,29 @@
 	"wx/generic/logg.h"
 	"wx/cocoa/log.h"
 
-1504064261 /usr/include/wx-3.0/wx/thread.h
+1521590331 /usr/include/wx-3.0/wx/thread.h
 	"wx/defs.h"
 
-1504064261 /usr/include/wx-3.0/wx/generic/logg.h
+1521590332 /usr/include/wx-3.0/wx/generic/logg.h
 
-1504064261 /usr/include/wx-3.0/wx/xtihandler.h
+1521590331 /usr/include/wx-3.0/wx/xtihandler.h
 	"wx/defs.h"
 	"wx/xti.h"
 
-1504064261 /usr/include/wx-3.0/wx/rtti.h
+1521590331 /usr/include/wx-3.0/wx/rtti.h
 	"wx/memory.h"
 	"wx/flags.h"
 
-1504064261 /usr/include/wx-3.0/wx/xti2.h
+1521590331 /usr/include/wx-3.0/wx/xti2.h
 	"wx/xtiprop.h"
 	"wx/xtictor.h"
 
-1504064261 /usr/include/wx-3.0/wx/xtiprop.h
+1521590331 /usr/include/wx-3.0/wx/xtiprop.h
 	"wx/defs.h"
 	"wx/xti.h"
 	"wx/any.h"
 
-1504064260 /usr/include/wx-3.0/wx/any.h
+1521590331 /usr/include/wx-3.0/wx/any.h
 	"wx/defs.h"
 	<new>
 	"wx/string.h"
@@ -3700,10 +3704,10 @@
 	"wx/datetime.h"
 	"wx/variant.h"
 
-1504064261 /usr/include/wx-3.0/wx/meta/if.h
+1521590331 /usr/include/wx-3.0/wx/meta/if.h
 	"wx/defs.h"
 
-1504064261 /usr/include/wx-3.0/wx/list.h
+1521590331 /usr/include/wx-3.0/wx/list.h
 	"wx/defs.h"
 	"wx/object.h"
 	"wx/string.h"
@@ -3714,7 +3718,7 @@
 	<list>
 	"wx/afterstd.h"
 
-1504064261 /usr/include/wx-3.0/wx/vector.h
+1521590331 /usr/include/wx-3.0/wx/vector.h
 	"wx/defs.h"
 	<vector>
 	<algorithm>
@@ -3725,21 +3729,21 @@
 	<new>
 	"wx/afterstd.h"
 
-1504064262 /usr/include/wx-3.0/wx/scopeguard.h
+1521590332 /usr/include/wx-3.0/wx/scopeguard.h
 	"wx/defs.h"
 	"wx/except.h"
 
-1504064260 /usr/include/wx-3.0/wx/except.h
+1521590331 /usr/include/wx-3.0/wx/except.h
 	"wx/defs.h"
 
-1504064261 /usr/include/wx-3.0/wx/meta/movable.h
+1521590331 /usr/include/wx-3.0/wx/meta/movable.h
 	"wx/meta/pod.h"
 	"wx/string.h"
 
-1504064261 /usr/include/wx-3.0/wx/meta/pod.h
+1521590331 /usr/include/wx-3.0/wx/meta/pod.h
 	"wx/defs.h"
 
-1504064260 /usr/include/wx-3.0/wx/datetime.h
+1521590331 /usr/include/wx-3.0/wx/datetime.h
 	"wx/defs.h"
 	"wx/msw/wince/time.h"
 	<time.h>
@@ -3748,7 +3752,7 @@
 	"wx/anystr.h"
 	"wx/dynarray.h"
 
-1504064261 /usr/include/wx-3.0/wx/longlong.h
+1521590331 /usr/include/wx-3.0/wx/longlong.h
 	"wx/defs.h"
 	"wx/string.h"
 	<limits.h>
@@ -3756,10 +3760,10 @@
 	<limits>
 	"wx/strvararg.h"
 
-1504064260 /usr/include/wx-3.0/wx/anystr.h
+1521590331 /usr/include/wx-3.0/wx/anystr.h
 	"wx/string.h"
 
-1504064261 /usr/include/wx-3.0/wx/variant.h
+1521590331 /usr/include/wx-3.0/wx/variant.h
 	"wx/defs.h"
 	"wx/object.h"
 	"wx/string.h"
@@ -3771,11 +3775,11 @@
 	"wx/iosfwrap.h"
 	"wx/any.h"
 
-1504064261 /usr/include/wx-3.0/wx/xtictor.h
+1521590331 /usr/include/wx-3.0/wx/xtictor.h
 	"wx/defs.h"
 	"wx/xti.h"
 
-1504064261 /usr/include/wx-3.0/wx/cursor.h
+1521590332 /usr/include/wx-3.0/wx/cursor.h
 	"wx/defs.h"
 	"wx/msw/cursor.h"
 	"wx/motif/cursor.h"
@@ -3788,14 +3792,14 @@
 	"wx/os2/cursor.h"
 	"wx/utils.h"
 
-1504064262 /usr/include/wx-3.0/wx/gtk/cursor.h
+1521590332 /usr/include/wx-3.0/wx/gtk/cursor.h
 	"wx/gdiobj.h"
 	"wx/gdicmn.h"
 
-1504064262 /usr/include/wx-3.0/wx/gdiobj.h
+1521590332 /usr/include/wx-3.0/wx/gdiobj.h
 	"wx/object.h"
 
-1504064261 /usr/include/wx-3.0/wx/gdicmn.h
+1521590332 /usr/include/wx-3.0/wx/gdicmn.h
 	"wx/defs.h"
 	"wx/list.h"
 	"wx/string.h"
@@ -3803,14 +3807,14 @@
 	"wx/hashmap.h"
 	"wx/math.h"
 
-1504064261 /usr/include/wx-3.0/wx/math.h
+1521590331 /usr/include/wx-3.0/wx/math.h
 	"wx/defs.h"
 	<math.h>
 	<cmath>
 	<float.h>
 	<ieeefp.h>
 
-1504064261 /usr/include/wx-3.0/wx/utils.h
+1521590331 /usr/include/wx-3.0/wx/utils.h
 	"wx/object.h"
 	"wx/list.h"
 	"wx/filefn.h"
@@ -3826,7 +3830,7 @@
 	<unistd.h>
 	<stdio.h>
 
-1504064261 /usr/include/wx-3.0/wx/filefn.h
+1521590331 /usr/include/wx-3.0/wx/filefn.h
 	"wx/list.h"
 	"wx/arrstr.h"
 	"wx/msw/wince/time.h"
@@ -3853,24 +3857,24 @@
 	<fcntl.h>
 	<sys/types.h>
 
-1504064261 /usr/include/wx-3.0/wx/versioninfo.h
+1521590331 /usr/include/wx-3.0/wx/versioninfo.h
 	"wx/string.h"
 
-1504064261 /usr/include/wx-3.0/wx/meta/implicitconversion.h
+1521590331 /usr/include/wx-3.0/wx/meta/implicitconversion.h
 	"wx/defs.h"
 	"wx/meta/if.h"
 
-1504064261 /usr/include/wx-3.0/wx/mousestate.h
+1521590331 /usr/include/wx-3.0/wx/mousestate.h
 	"wx/gdicmn.h"
 	"wx/kbdstate.h"
 
-1504064261 /usr/include/wx-3.0/wx/kbdstate.h
+1521590331 /usr/include/wx-3.0/wx/kbdstate.h
 	"wx/defs.h"
 
-1504064261 /usr/include/wx-3.0/wx/platinfo.h
+1521590331 /usr/include/wx-3.0/wx/platinfo.h
 	"wx/string.h"
 
-1504064262 /usr/include/wx-3.0/wx/font.h
+1521590332 /usr/include/wx-3.0/wx/font.h
 	"wx/defs.h"
 	"wx/fontenc.h"
 	"wx/gdiobj.h"
@@ -3885,9 +3889,9 @@
 	"wx/cocoa/font.h"
 	"wx/os2/font.h"
 
-1504064262 /usr/include/wx-3.0/wx/gtk/font.h
+1521590332 /usr/include/wx-3.0/wx/gtk/font.h
 
-1504064262 /usr/include/wx-3.0/wx/colour.h
+1521590332 /usr/include/wx-3.0/wx/colour.h
 	"wx/defs.h"
 	"wx/gdiobj.h"
 	"wx/variant.h"
@@ -3901,9 +3905,9 @@
 	"wx/cocoa/colour.h"
 	"wx/os2/colour.h"
 
-1504064262 /usr/include/wx-3.0/wx/gtk/colour.h
+1521590332 /usr/include/wx-3.0/wx/gtk/colour.h
 
-1504064262 /usr/include/wx-3.0/wx/bitmap.h
+1521590332 /usr/include/wx-3.0/wx/bitmap.h
 	"wx/string.h"
 	"wx/gdicmn.h"
 	"wx/colour.h"
@@ -3920,7 +3924,7 @@
 	"wx/os2/bitmap.h"
 	"wx/generic/mask.h"
 
-1504064262 /usr/include/wx-3.0/wx/image.h
+1521590332 /usr/include/wx-3.0/wx/image.h
 	"wx/defs.h"
 	"wx/object.h"
 	"wx/string.h"
@@ -3940,52 +3944,52 @@
 	"wx/imagxpm.h"
 	"wx/imagiff.h"
 
-1504064261 /usr/include/wx-3.0/wx/stream.h
+1521590331 /usr/include/wx-3.0/wx/stream.h
 	"wx/defs.h"
 	<stdio.h>
 	"wx/object.h"
 	"wx/string.h"
 	"wx/filefn.h"
 
-1504064262 /usr/include/wx-3.0/wx/imagbmp.h
+1521590332 /usr/include/wx-3.0/wx/imagbmp.h
 	"wx/image.h"
 
-1504064262 /usr/include/wx-3.0/wx/imagpng.h
+1521590332 /usr/include/wx-3.0/wx/imagpng.h
 	"wx/defs.h"
 	"wx/image.h"
 	"wx/versioninfo.h"
 
-1504064262 /usr/include/wx-3.0/wx/imaggif.h
+1521590332 /usr/include/wx-3.0/wx/imaggif.h
 	"wx/image.h"
 
-1504064262 /usr/include/wx-3.0/wx/imagpcx.h
+1521590332 /usr/include/wx-3.0/wx/imagpcx.h
 	"wx/image.h"
 
-1504064262 /usr/include/wx-3.0/wx/imagjpeg.h
+1521590332 /usr/include/wx-3.0/wx/imagjpeg.h
 	"wx/defs.h"
 	"wx/image.h"
 	"wx/versioninfo.h"
 
-1504064262 /usr/include/wx-3.0/wx/imagtga.h
+1521590332 /usr/include/wx-3.0/wx/imagtga.h
 	"wx/image.h"
 
-1504064262 /usr/include/wx-3.0/wx/imagtiff.h
+1521590332 /usr/include/wx-3.0/wx/imagtiff.h
 	"wx/defs.h"
 	"wx/image.h"
 	"wx/versioninfo.h"
 
-1504064262 /usr/include/wx-3.0/wx/imagpnm.h
+1521590332 /usr/include/wx-3.0/wx/imagpnm.h
 	"wx/image.h"
 
-1504064262 /usr/include/wx-3.0/wx/imagxpm.h
+1521590332 /usr/include/wx-3.0/wx/imagxpm.h
 	"wx/image.h"
 
-1504064262 /usr/include/wx-3.0/wx/imagiff.h
+1521590332 /usr/include/wx-3.0/wx/imagiff.h
 	"wx/image.h"
 
-1504064262 /usr/include/wx-3.0/wx/gtk/bitmap.h
+1521590332 /usr/include/wx-3.0/wx/gtk/bitmap.h
 
-1504064261 /usr/include/wx-3.0/wx/brush.h
+1521590331 /usr/include/wx-3.0/wx/brush.h
 	"wx/defs.h"
 	"wx/object.h"
 	"wx/gdiobj.h"
@@ -3999,9 +4003,9 @@
 	"wx/cocoa/brush.h"
 	"wx/os2/brush.h"
 
-1504064262 /usr/include/wx-3.0/wx/gtk/brush.h
+1521590332 /usr/include/wx-3.0/wx/gtk/brush.h
 
-1504064261 /usr/include/wx-3.0/wx/pen.h
+1521590332 /usr/include/wx-3.0/wx/pen.h
 	"wx/gdiobj.h"
 	"wx/gdicmn.h"
 	"wx/msw/pen.h"
@@ -4013,9 +4017,9 @@
 	"wx/cocoa/pen.h"
 	"wx/os2/pen.h"
 
-1504064262 /usr/include/wx-3.0/wx/gtk/pen.h
+1521590333 /usr/include/wx-3.0/wx/gtk/pen.h
 
-1504064261 /usr/include/wx-3.0/wx/palette.h
+1521590332 /usr/include/wx-3.0/wx/palette.h
 	"wx/defs.h"
 	"wx/object.h"
 	"wx/gdiobj.h"
@@ -4025,13 +4029,13 @@
 	"wx/osx/palette.h"
 	"wx/os2/palette.h"
 
-1504064262 /usr/include/wx-3.0/wx/generic/paletteg.h
+1521590332 /usr/include/wx-3.0/wx/generic/paletteg.h
 	"wx/defs.h"
 	"wx/object.h"
 	"wx/gdiobj.h"
 	"wx/gdicmn.h"
 
-1504064262 /usr/include/wx-3.0/wx/region.h
+1521590332 /usr/include/wx-3.0/wx/region.h
 	"wx/gdiobj.h"
 	"wx/gdicmn.h"
 	"wx/msw/region.h"
@@ -4043,23 +4047,23 @@
 	"wx/cocoa/region.h"
 	"wx/os2/region.h"
 
-1504064262 /usr/include/wx-3.0/wx/gtk/region.h
+1521590333 /usr/include/wx-3.0/wx/gtk/region.h
 
-1504064261 /usr/include/wx-3.0/wx/affinematrix2d.h
+1521590331 /usr/include/wx-3.0/wx/affinematrix2d.h
 	"wx/defs.h"
 	"wx/affinematrix2dbase.h"
 
-1504064261 /usr/include/wx-3.0/wx/affinematrix2dbase.h
+1521590331 /usr/include/wx-3.0/wx/affinematrix2dbase.h
 	"wx/defs.h"
 	"wx/geometry.h"
 
-1504064262 /usr/include/wx-3.0/wx/geometry.h
+1521590332 /usr/include/wx-3.0/wx/geometry.h
 	"wx/defs.h"
 	"wx/utils.h"
 	"wx/gdicmn.h"
 	"wx/math.h"
 
-1504064262 /usr/include/wx-3.0/wx/window.h
+1521590332 /usr/include/wx-3.0/wx/window.h
 	"wx/event.h"
 	"wx/list.h"
 	"wx/cursor.h"
@@ -4083,7 +4087,7 @@
 	"wx/os2/window.h"
 	"wx/univ/window.h"
 
-1504064260 /usr/include/wx-3.0/wx/event.h
+1521590331 /usr/include/wx-3.0/wx/event.h
 	"wx/defs.h"
 	"wx/cpp.h"
 	"wx/object.h"
@@ -4099,23 +4103,23 @@
 	"wx/meta/convertible.h"
 	"wx/meta/removeref.h"
 
-1504064260 /usr/include/wx-3.0/wx/clntdata.h
+1521590331 /usr/include/wx-3.0/wx/clntdata.h
 	"wx/defs.h"
 	"wx/string.h"
 	"wx/hashmap.h"
 
-1504064261 /usr/include/wx-3.0/wx/tracker.h
+1521590331 /usr/include/wx-3.0/wx/tracker.h
 	"wx/defs.h"
 
-1504064261 /usr/include/wx-3.0/wx/meta/convertible.h
+1521590331 /usr/include/wx-3.0/wx/meta/convertible.h
 
-1504064261 /usr/include/wx-3.0/wx/meta/removeref.h
+1521590331 /usr/include/wx-3.0/wx/meta/removeref.h
 
-1504064262 /usr/include/wx-3.0/wx/validate.h
+1521590332 /usr/include/wx-3.0/wx/validate.h
 	"wx/defs.h"
 	"wx/event.h"
 
-1504064262 /usr/include/wx-3.0/wx/accel.h
+1521590332 /usr/include/wx-3.0/wx/accel.h
 	"wx/defs.h"
 	"wx/object.h"
 	"wx/generic/accel.h"
@@ -4127,17 +4131,17 @@
 	"wx/generic/accel.h"
 	"wx/os2/accel.h"
 
-1504064261 /usr/include/wx-3.0/wx/generic/accel.h
+1521590332 /usr/include/wx-3.0/wx/generic/accel.h
 
-1504064262 /usr/include/wx-3.0/wx/gtk/accel.h
+1521590333 /usr/include/wx-3.0/wx/gtk/accel.h
 	"wx/generic/accel.h"
 
-1504064262 /usr/include/wx-3.0/wx/access.h
+1521590332 /usr/include/wx-3.0/wx/access.h
 	"wx/defs.h"
 	"wx/variant.h"
 	"wx/msw/ole/access.h"
 
-1504064262 /usr/include/wx-3.0/wx/gtk/window.h
+1521590333 /usr/include/wx-3.0/wx/gtk/window.h
 	"wx/dynarray.h"
 
 1516293261 source:/home/lj/git-repos/SigrokLCD/led.cpp
@@ -4153,7 +4157,7 @@
 	<wx/timer.h>
 	<wx/window.h>
 
-1504064261 /usr/include/wx-3.0/wx/icon.h
+1521590332 /usr/include/wx-3.0/wx/icon.h
 	"wx/iconloc.h"
 	"wx/msw/icon.h"
 	"wx/motif/icon.h"
@@ -4167,13 +4171,13 @@
 	"wx/os2/icon.h"
 	"wx/variant.h"
 
-1504064261 /usr/include/wx-3.0/wx/iconloc.h
+1521590331 /usr/include/wx-3.0/wx/iconloc.h
 	"wx/string.h"
 
-1504064262 /usr/include/wx-3.0/wx/generic/icon.h
+1521590332 /usr/include/wx-3.0/wx/generic/icon.h
 	"wx/bitmap.h"
 
-1504064261 /usr/include/wx-3.0/wx/timer.h
+1521590331 /usr/include/wx-3.0/wx/timer.h
 	"wx/defs.h"
 	"wx/object.h"
 	"wx/longlong.h"
@@ -4181,21 +4185,21 @@
 	"wx/stopwatch.h"
 	"wx/utils.h"
 
-1504064261 /usr/include/wx-3.0/wx/stopwatch.h
+1521590331 /usr/include/wx-3.0/wx/stopwatch.h
 	"wx/defs.h"
 	"wx/longlong.h"
 	"wx/time.h"
 
-1504064261 /usr/include/wx-3.0/wx/time.h
+1521590331 /usr/include/wx-3.0/wx/time.h
 	"wx/longlong.h"
 
 1516349753 /home/lj/git-repos/SigrokLCD/leds.xpm
 
-1504064261 /usr/include/wx-3.0/wx/dcmemory.h
+1521590332 /usr/include/wx-3.0/wx/dcmemory.h
 	"wx/dc.h"
 	"wx/bitmap.h"
 
-1504064261 /usr/include/wx-3.0/wx/settings.h
+1521590332 /usr/include/wx-3.0/wx/settings.h
 	"wx/colour.h"
 	"wx/font.h"
 
@@ -4207,7 +4211,7 @@
 1517833501 /home/lj/git-repos/SigrokLCD/SigrokLcdApp.h
 	<wx/app.h>
 
-1504064260 /usr/include/wx-3.0/wx/app.h
+1521590331 /usr/include/wx-3.0/wx/app.h
 	"wx/event.h"
 	"wx/eventfilter.h"
 	"wx/build.h"
@@ -4227,24 +4231,24 @@
 	"wx/os2/app.h"
 	"wx/univ/theme.h"
 
-1504064260 /usr/include/wx-3.0/wx/eventfilter.h
+1521590331 /usr/include/wx-3.0/wx/eventfilter.h
 	"wx/defs.h"
 
-1504064260 /usr/include/wx-3.0/wx/build.h
+1521590331 /usr/include/wx-3.0/wx/build.h
 	"wx/version.h"
 
-1504064260 /usr/include/wx-3.0/wx/cmdargs.h
+1521590331 /usr/include/wx-3.0/wx/cmdargs.h
 	"wx/arrstr.h"
 
-1504064261 /usr/include/wx-3.0/wx/init.h
+1521590331 /usr/include/wx-3.0/wx/init.h
 	"wx/defs.h"
 	"wx/chartype.h"
 	"wx/msw/init.h"
 
-1504064261 /usr/include/wx-3.0/wx/unix/app.h
+1521590331 /usr/include/wx-3.0/wx/unix/app.h
 	<signal.h>
 
-1504064262 /usr/include/wx-3.0/wx/gtk/app.h
+1521590332 /usr/include/wx-3.0/wx/gtk/app.h
 
 1518425384 /home/lj/git-repos/SigrokLCD/SigrokLcdMain.h
 	<libsigrokcxx/libsigrokcxx.hpp>
@@ -4258,10 +4262,10 @@
 1487001207 /usr/include/glib-2.0/glib/guuid.h
 	<glib/gtypes.h>
 
-1504882338 /usr/include/glibmm-2.4/glibmm/variantdbusstring.h
+1514539860 /usr/include/glibmm-2.4/glibmm/variantdbusstring.h
 	<glibmm/ustring.h>
 
-1504064261 /usr/include/wx-3.0/wx/frame.h
+1521590332 /usr/include/wx-3.0/wx/frame.h
 	"wx/toplevel.h"
 	"wx/statusbr.h"
 	"wx/univ/frame.h"
@@ -4273,7 +4277,7 @@
 	"wx/cocoa/frame.h"
 	"wx/os2/frame.h"
 
-1504064262 /usr/include/wx-3.0/wx/toplevel.h
+1521590332 /usr/include/wx-3.0/wx/toplevel.h
 	"wx/nonownedwnd.h"
 	"wx/iconbndl.h"
 	"wx/weakref.h"
@@ -4288,31 +4292,31 @@
 	"wx/motif/toplevel.h"
 	"wx/univ/toplevel.h"
 
-1504064262 /usr/include/wx-3.0/wx/nonownedwnd.h
+1521590332 /usr/include/wx-3.0/wx/nonownedwnd.h
 	"wx/window.h"
 	"wx/dfb/nonownedwnd.h"
 	"wx/gtk/nonownedwnd.h"
 	"wx/osx/nonownedwnd.h"
 	"wx/msw/nonownedwnd.h"
 
-1504064262 /usr/include/wx-3.0/wx/gtk/nonownedwnd.h
+1521590333 /usr/include/wx-3.0/wx/gtk/nonownedwnd.h
 
-1504064262 /usr/include/wx-3.0/wx/iconbndl.h
+1521590332 /usr/include/wx-3.0/wx/iconbndl.h
 	"wx/gdiobj.h"
 	"wx/gdicmn.h"
 	"wx/icon.h"
 	"wx/dynarray.h"
 
-1504064261 /usr/include/wx-3.0/wx/weakref.h
+1521590331 /usr/include/wx-3.0/wx/weakref.h
 	"wx/tracker.h"
 	"wx/meta/convertible.h"
 	"wx/meta/int2type.h"
 
-1504064261 /usr/include/wx-3.0/wx/meta/int2type.h
+1521590331 /usr/include/wx-3.0/wx/meta/int2type.h
 
-1504064262 /usr/include/wx-3.0/wx/gtk/toplevel.h
+1521590333 /usr/include/wx-3.0/wx/gtk/toplevel.h
 
-1504064261 /usr/include/wx-3.0/wx/statusbr.h
+1521590332 /usr/include/wx-3.0/wx/statusbr.h
 	"wx/defs.h"
 	"wx/control.h"
 	"wx/list.h"
@@ -4323,7 +4327,7 @@
 	"wx/osx/statusbr.h"
 	"wx/generic/statusbr.h"
 
-1504064261 /usr/include/wx-3.0/wx/control.h
+1521590332 /usr/include/wx-3.0/wx/control.h
 	"wx/defs.h"
 	"wx/window.h"
 	"wx/univ/control.h"
@@ -4335,16 +4339,16 @@
 	"wx/cocoa/control.h"
 	"wx/os2/control.h"
 
-1504064262 /usr/include/wx-3.0/wx/gtk/control.h
+1521590333 /usr/include/wx-3.0/wx/gtk/control.h
 
-1504064262 /usr/include/wx-3.0/wx/generic/statusbr.h
+1521590333 /usr/include/wx-3.0/wx/generic/statusbr.h
 	"wx/defs.h"
 	"wx/pen.h"
 	"wx/arrstr.h"
 
-1504064262 /usr/include/wx-3.0/wx/gtk/frame.h
+1521590333 /usr/include/wx-3.0/wx/gtk/frame.h
 
-1504064261 /usr/include/wx-3.0/wx/menu.h
+1521590332 /usr/include/wx-3.0/wx/menu.h
 	"wx/defs.h"
 	"wx/list.h"
 	"wx/window.h"
@@ -4358,7 +4362,7 @@
 	"wx/cocoa/menu.h"
 	"wx/os2/menu.h"
 
-1504064262 /usr/include/wx-3.0/wx/menuitem.h
+1521590332 /usr/include/wx-3.0/wx/menuitem.h
 	"wx/defs.h"
 	"wx/object.h"
 	"wx/univ/menuitem.h"
@@ -4370,10 +4374,10 @@
 	"wx/cocoa/menuitem.h"
 	"wx/os2/menuitem.h"
 
-1504064262 /usr/include/wx-3.0/wx/gtk/menuitem.h
+1521590333 /usr/include/wx-3.0/wx/gtk/menuitem.h
 	"wx/bitmap.h"
 
-1504064262 /usr/include/wx-3.0/wx/gtk/menu.h
+1521590333 /usr/include/wx-3.0/wx/gtk/menu.h
 
 1518431358 source:/home/lj/git-repos/SigrokLCD/SigrokLcdMain.cpp
 	"SigrokLcdMain.h"
@@ -4471,7 +4475,7 @@
 
 1504064262 /usr/include/wx-3.0/wx/gtk/stattext.h
 
-1504064261 /usr/include/wx-3.0/wx/textctrl.h
+1521590332 /usr/include/wx-3.0/wx/textctrl.h
 	"wx/defs.h"
 	"wx/control.h"
 	"wx/textentry.h"
@@ -4489,7 +4493,7 @@
 	"wx/cocoa/textctrl.h"
 	"wx/os2/textctrl.h"
 
-1504064261 /usr/include/wx-3.0/wx/textentry.h
+1521590332 /usr/include/wx-3.0/wx/textentry.h
 	"wx/filefn.h"
 	"wx/gdicmn.h"
 	"wx/gtk/textentry.h"
@@ -4498,16 +4502,16 @@
 	"wx/motif/textentry.h"
 	"wx/os2/textentry.h"
 
-1504064262 /usr/include/wx-3.0/wx/gtk/textentry.h
+1521590333 /usr/include/wx-3.0/wx/gtk/textentry.h
 
-1504064261 /usr/include/wx-3.0/wx/ioswrap.h
+1521590331 /usr/include/wx-3.0/wx/ioswrap.h
 	"wx/beforestd.h"
 	<iostream.h>
 	<iostream>
 	"wx/afterstd.h"
 	"wx/msw/winundef.h"
 
-1504064262 /usr/include/wx-3.0/wx/gtk/textctrl.h
+1521590333 /usr/include/wx-3.0/wx/gtk/textctrl.h
 
 1504064261 /usr/include/wx-3.0/wx/listbox.h
 	"wx/defs.h"
@@ -4521,7 +4525,7 @@
 	"wx/os2/listbox.h"
 	"wx/cocoa/listbox.h"
 
-1504064261 /usr/include/wx-3.0/wx/ctrlsub.h
+1521590332 /usr/include/wx-3.0/wx/ctrlsub.h
 	"wx/defs.h"
 	"wx/arrstr.h"
 	"wx/control.h"
@@ -4811,7 +4815,7 @@
 
 1504064262 /usr/include/wx-3.0/wx/gtk/checklst.h
 
-1504064261 /usr/include/wx-3.0/wx/choice.h
+1521590332 /usr/include/wx-3.0/wx/choice.h
 	"wx/defs.h"
 	"wx/ctrlsub.h"
 	"wx/univ/choice.h"
@@ -4824,7 +4828,7 @@
 	"wx/cocoa/choice.h"
 	"wx/os2/choice.h"
 
-1504064262 /usr/include/wx-3.0/wx/gtk/choice.h
+1521590333 /usr/include/wx-3.0/wx/gtk/choice.h
 
 1504064261 /usr/include/wx-3.0/wx/scrolbar.h
 	"wx/defs.h"
@@ -4977,7 +4981,7 @@
 
 1504064262 /usr/include/wx-3.0/wx/gtk/toolbar.h
 
-1504064261 /usr/include/wx-3.0/wx/combobox.h
+1521590332 /usr/include/wx-3.0/wx/combobox.h
 	"wx/defs.h"
 	"wx/textctrl.h"
 	"wx/ctrlsub.h"
@@ -4991,7 +4995,7 @@
 	"wx/cocoa/combobox.h"
 	"wx/os2/combobox.h"
 
-1504064262 /usr/include/wx-3.0/wx/gtk/combobox.h
+1521590333 /usr/include/wx-3.0/wx/gtk/combobox.h
 	"wx/choice.h"
 
 1504064261 /usr/include/wx-3.0/wx/layout.h
@@ -5131,4 +5135,43 @@
 
 1513253095 /usr/local/include/libserialport.h
 	<stddef.h>
+
+1521790184 source:/home/lj/git-repos/SigrokLcd/lcdwindow.cpp
+	"lcdwindow.h"
+
+1521790184 /home/lj/git-repos/SigrokLcd/lcdwindow.h
+	<wx/dcclient.h>
+	<wx/window.h>
+
+1521790184 source:/home/lj/git-repos/SigrokLcd/led.cpp
+	"led.h"
+	"leds.xpm"
+	<wx/dcmemory.h>
+	<wx/settings.h>
+
+1521790184 /home/lj/git-repos/SigrokLcd/led.h
+	<wx/icon.h>
+	<wx/dcclient.h>
+	<wx/bitmap.h>
+	<wx/timer.h>
+	<wx/window.h>
+
+1521790184 /home/lj/git-repos/SigrokLcd/leds.xpm
+
+1521790184 source:/home/lj/git-repos/SigrokLcd/SigrokLcdApp.cpp
+	"SigrokLcdApp.h"
+	"SigrokLcdMain.h"
+	<wx/image.h>
+
+1521790184 /home/lj/git-repos/SigrokLcd/SigrokLcdApp.h
+	<wx/app.h>
+
+1521790184 /home/lj/git-repos/SigrokLcd/SigrokLcdMain.h
+	<libsigrokcxx/libsigrokcxx.hpp>
+	"lcdwindow.h"
+	"led.h"
+	<wx/combobox.h>
+	<wx/frame.h>
+	<wx/menu.h>
+	<wx/statusbr.h>
 

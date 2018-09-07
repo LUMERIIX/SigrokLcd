@@ -291,7 +291,7 @@ void SigrokLcdFrame::OnConnect(wxCommandEvent& event)
 
     wxString SelectedDriver = wxGetSingleChoice(wxT("Select One of the Drivers"),wxT("Select..."),Multimeters,lcd_);
     wxString last_Conn;
-    if(IsEmpty(SelectedDriver))
+    if(wxIsEmpty(SelectedDriver))
         return;
 
 
@@ -379,9 +379,10 @@ void SigrokLcdFrame::OnAbout(wxCommandEvent& event)
 void SigrokLcdFrame::sigrok_datafeed_callback(std::shared_ptr<sigrok::Device> hwDev, std::shared_ptr<sigrok::Packet> packet)
 {
         float f;
-        int i = 0;
+//        int i = 0;
         int exp_val = 0;
-        float exp =1;
+//        float exp =1;
+        wxString nextVal_old;
         float disp_val = 0;
     //::wxMessageBox("sigrok_datafeed_callback");
     if(packet->type() == sigrok::PacketType::ANALOG)
@@ -413,35 +414,35 @@ void SigrokLcdFrame::sigrok_datafeed_callback(std::shared_ptr<sigrok::Device> hw
         //::wxMessageBox("exp: %s",getfloat);
 
 
-        if(exp_val >= 6)
-        {
-                exp_val = 6;
-                ledMHz_->SetState(awxLED_ON);
-                ledMHz_->Refresh();
-                ledMHz_->Update();
-        }
-        else if(exp_val >= 3)
-        {
-                exp_val = 3;
-                ledkHz_->SetState(awxLED_ON);
-                ledkHz_->Refresh();
-                ledkHz_->Update();
-
-        }
-        else if(exp_val >= 0)
-        {
-                exp_val = 0;
-                ledHz_->SetState(awxLED_ON);
-                ledHz_->Refresh();
-                ledHz_->Update();
-        }
-        else if(exp_val >= -3)
-        {
-                exp_val = -3;
-                ledmHz_->SetState(awxLED_ON);
-                ledmHz_->Refresh();
-                ledmHz_->Update();
-        }
+//        if(exp_val >= 6)
+//        {
+//                exp_val = 6;
+//                ledMHz_->SetState(awxLED_ON);
+//                ledMHz_->Refresh();
+//                ledMHz_->Update();
+//        }
+//        else if(exp_val >= 3)
+//        {
+//                exp_val = 3;
+//                ledkHz_->SetState(awxLED_ON);
+//                ledkHz_->Refresh();
+//                ledkHz_->Update();
+//
+//        }
+//        else if(exp_val >= 0)
+//        {
+//                exp_val = 0;
+//                ledHz_->SetState(awxLED_ON);
+//                ledHz_->Refresh();
+//                ledHz_->Update();
+//        }
+//        else if(exp_val >= -3)
+//        {
+//                exp_val = -3;
+//                ledmHz_->SetState(awxLED_ON);
+//                ledmHz_->Refresh();
+//                ledmHz_->Update();
+//        }
 
 //        if(f<=0)
 //        {
@@ -452,7 +453,48 @@ void SigrokLcdFrame::sigrok_datafeed_callback(std::shared_ptr<sigrok::Device> hw
 
         disp_val = f / pow(10,exp_val);
 
-        wxString nextVal = wxString::Format(_T("%10.4f"), disp_val);
+
+        wxString nextVal = wxString::Format(_T("%10.6f"), disp_val);
+        if (nextVal.Contains("-") || nextVal.Contains("") || nextVal.IsEmpty())
+        {
+            nextVal = nextVal_old;
+        }
+        else
+        {
+            if(exp_val >= 6)
+            {
+                exp_val = 6;
+                ledMHz_->SetState(awxLED_ON);
+                ledMHz_->Refresh();
+                ledMHz_->Update();
+            }
+            else if(exp_val >= 3)
+            {
+                exp_val = 3;
+                ledkHz_->SetState(awxLED_ON);
+                ledkHz_->Refresh();
+                ledkHz_->Update();
+
+            }
+            else if(exp_val >= 0)
+            {
+                exp_val = 0;
+                ledHz_->SetState(awxLED_ON);
+                ledHz_->Refresh();
+                ledHz_->Update();
+            }
+            else if(exp_val >= -3)
+            {
+                exp_val = -3;
+                ledmHz_->SetState(awxLED_ON);
+                ledmHz_->Refresh();
+                ledmHz_->Update();
+            }
+
+            nextVal_old = nextVal;
+        }
+
+//        wxString nextVal = wxString::Format(_T("%10.4f"), disp_val);
         //::wxMessageBox(("%s"),expval);
         lcd_->SetValue(nextVal);
         lcd_->Refresh();
